@@ -3,7 +3,7 @@ for [Interactive Device Design](https://github.com/FAR-Lab/Developing-and-Design
 
 Please place links here to the README.md's for each of your labs here:
 
-[Lab 1. Recreating the Masters](Lab%201/REDME.md)
+[Lab 1. Recreating the Masters](Lab%201/README.md)
 
 Lab 2. Interactive Prototyping: The Clock of Pi
 
