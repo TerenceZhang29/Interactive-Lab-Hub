@@ -2,9 +2,14 @@
 
 _This project is to be done in teams of 2._
 
-**NAME OF BOTH COLLABORATOR(S) HERE**
+**NAME OF BOTH COLLABORATOR(S) HERE: Terence Zhang; Jiesen Huang**
 
-**THE MASTERWORK YOU DREW FROM THE HAT:**
+**THE MASTERWORK YOU DREW FROM THE HAT: The Campfire — Prehistory**
+
+*The original interactive light: gather round, tend it, and watch.*
+
+> **How to read this page:** our own responses are set in blockquotes like this
+> one, to separate them from the original assignment text.
 
 ---
 
@@ -92,6 +97,19 @@ the interaction*:
 **Describe your masterwork here, in your own words. What is the core interaction
 someone would recognize it by?**
 
+> The campfire is an interactive light from prehistory, with no single known
+> creator. Its interaction is simple and immediately recognizable: people gather
+> around it, feed it fuel, react to its changes, and watch it gradually die
+> down. A person can approach, add wood, or stop tending the fire; in response,
+> the light can brighten, flicker, flare, stabilize, or fade.
+>
+> What makes the campfire interactive is that its behavior affects the people
+> around it. A weak fire draws someone closer to tend it, while a sudden flare can
+> push that person away. Its strength is this direct, legible feedback between
+> human action and changing light. Its weakness is that the response is not fully
+> predictable: the same act of adding fuel can produce warmth and stability or a
+> dangerous burst.
+
 ## Part A. Plan
 
 For your masterwork, reconstruct the interaction as a scene:
@@ -105,16 +123,34 @@ For your masterwork, reconstruct the interaction as a scene:
 
 **Describe your setting, players, activity, and goals here.**
 
+> - **Setting:** At night in a remote prehistoric landscape, a group gathers
+>   around a campfire.
+> - **Players:** A fire-tender (the active player), the surrounding group members
+>   staying nearby, and the campfire itself as the responsive light in the
+>   interaction.
+> - **Activity:** The fire is small and close to going out, so the active player
+>   approaches and adds wood. The fire becomes brighter and louder, flaring up
+>   hard enough to drive the player back. Once it settles, the player cautiously
+>   returns and sits nearby. Without more fuel, the fire eventually fades. (We
+>   later revised this opening so the player starts the fire from scratch — see
+>   Part B.)
+> - **Goals:** The active player wants to start and maintain a useful campfire
+>   without being burned. The nearby group wants a stable source of light and
+>   warmth. The staged fire should respond clearly enough that viewers can read
+>   the relationship between tending, danger, and comfort.
+
 Now **sketch a 3 storyboards** of the interaction you are recreating. (The number may depend on the thing you drew, but stretch your thinking!) They
 don't need to be beautiful, but they must capture and communicate not only the behavior of the light, but how it affects
 and the people around it. If you're new to storyboarding, read
 [this explanation](https://www.nngroup.com/articles/storyboards-visualize-ideas/).
 
-**Include pictures of your storyboards here.**
+> ![Storyboard iteration 1: approach the glow, retreat from the flare, return as it settles, and watch until dawn](./storyboard-render.png)
 
 Use the storyboards to decide what interaction to prototype.
 
 **Summarize the feedback you got here.**
+
+> _(To be filled in after the in-class critique on Monday.)_
 
 ## Part B. Act out the Interaction
 
@@ -124,10 +160,48 @@ it aloud.
 
 **Are there things that seemed better on paper than when acted out?**
 
+> When we acted it out, the first stage seemed too quiet and redundant. Simply
+> having the person approach a weak fire did not create enough action or
+> interaction, and it looked too similar to the final moment of quietly watching
+> the fire — the opening needed a clearer human action and a more immediate
+> response from the light.
+
 **Did new ideas about the piece surface once you were on your feet?**
+
+> We changed the opening so the player now starts the fire from scratch: they
+> reach for a matchbox, strike a match, and use it to light the kindling. This
+> creates a clear input from the player and an immediate change in the light. We
+> also refined the fuel-adding moment: the player throws a log into the fire, the
+> flame jumps briefly, and then—after a two-second delay—bursts into a vivid
+> orange-red flare.
 
 **Are there key moments in the interaction where things could go in a different direction?**
 Iterate your storyboards to capture key non-sequential aspects of the interaction. 
+
+> The key branch occurs when the player adds a log. In the performed scenario,
+> the player throws it in; the fire hops and then flares, driving the player
+> away. In the alternative scenario, the player places the log carefully; the
+> fire remains stable, so the player can stay nearby. Both paths eventually lead
+> to the ending, when the fire slowly burns down to embers as night ends.
+>
+> ![Storyboard iteration 2: detailed ignition sequence and branching fuel interaction](storyboard-iteration-2-render.png)
+
+### Storyboard Iteration 3: Choreographing the Fade
+
+> During the final recording, a third iteration emerged. We had originally
+> imagined the ending as a group gathered around the fire and singing, but I
+> performed this take alone, so that scene was not practical to stage. More
+> importantly, a group tableau would not solve the earlier problem of the ending
+> feeling too passive.
+>
+> I replaced it with one clear solo action. After retreating from the flare, the
+> performer waits for the fire to stabilize, approaches slowly, sits down,
+> presses both hands together, closes their eyes, and holds a wish while the
+> flame becomes smaller and finally goes out. The sustained pose gives the fading
+> light a visible human counterpart and turns the final extinguishing sequence
+> into an emotional beat rather than another static shot.
+>
+> ![Storyboard iteration 3: the final performed sequence from lighting the fire through making a wish as it fades](./storyboard-iteration-3-render.png)
 
 ## Part C. Prototype the Light (light first!)
 
@@ -154,6 +228,25 @@ video feed of whichever scene you want to capture.)
 
 **Include your first attempts at recording the wizarded set-up here.**
 
+### First Wizarded Interaction Attempt
+
+> In this first run, we split the roles: one of us performed the interaction
+> while the other secretly controlled the phone's light response. We used it to
+> test whether the fire's timing and changes in brightness were legible before
+> refining the final video sketch.
+
+<video
+  src="https://raw.githubusercontent.com/TerenceZhang29/Interactive-Lab-Hub/Fall2026/Lab%201/assets/first_attempt.mp4"
+  poster="assets/video-first-attempt-preview.jpg"
+  controls
+  muted
+  width="640">
+  Your browser can't play this video —
+  <a href="assets/first_attempt.mp4">download the MP4</a> instead.
+</video>
+
+_[Download the MP4 directly](assets/first_attempt.mp4)_
+
 ## Part E. (optional) Costume the Device
 
 Only now should you worry about what the device looks like. Costume your phone so it reads
@@ -174,7 +267,31 @@ and calm for a bedroom?
 the top of this lab: a viewer who knows the piece should recognize it; a viewer
 who doesn't should come away understanding what it's famous for. How might you illustrate the non-sequential aspects of the interaction in the sketch?
 
+> The final video follows the performed branch from iteration 2: throwing the
+> log causes a small warning hop, followed by a delayed flare that drives the
+> performer back. The careful log-placement alternative remains documented in
+> the second storyboard rather than being forced into one linear recording.
+>
+> Because I performed the final take alone, I did not attempt the earlier idea
+> of several people gathering and singing around the campfire. Instead, I slowly
+> approach the settled fire, sit down, bring my hands together, close my eyes,
+> and make a wish. I hold that pose as the light dims from flame to embers and
+> finally disappears. This gives the last scene both physical movement and a
+> readable relationship between the performer and the changing light.
+
 **Include your video here.**
+
+<video
+  src="https://raw.githubusercontent.com/TerenceZhang29/Interactive-Lab-Hub/Fall2026/Lab%201/assets/video.mp4"
+  poster="assets/video-first-attempt-preview.jpg"
+  controls
+  muted
+  width="640">
+  Your browser can't play this video —
+  <a href="assets/video.mp4">download the MP4</a> instead.
+</video>
+
+_[Download the MP4 directly](assets/video.mp4)_
 
 **Please indicate who you collaborated with on this lab.** Be generous in
 acknowledging their contributions, and credit any other influences (YouTube,
