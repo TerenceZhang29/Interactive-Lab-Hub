@@ -235,15 +235,7 @@ video feed of whichever scene you want to capture.)
 > test whether the fire's timing and changes in brightness were legible before
 > refining the final video sketch.
 
-<video
-  src="https://raw.githubusercontent.com/TerenceZhang29/Interactive-Lab-Hub/Fall2026/Lab%201/assets/first_attempt.mp4"
-  poster="assets/video-first-attempt-preview.jpg"
-  controls
-  muted
-  width="640">
-  Your browser can't play this video —
-  <a href="assets/first_attempt.mp4">download the MP4</a> instead.
-</video>
+https://github.com/user-attachments/assets/82251bd1-e491-404c-b37a-165d6038bfa6
 
 _[Download the MP4 directly](assets/first_attempt.mp4)_
 
@@ -281,15 +273,7 @@ who doesn't should come away understanding what it's famous for. How might you i
 
 **Include your video here.**
 
-<video
-  src="https://raw.githubusercontent.com/TerenceZhang29/Interactive-Lab-Hub/Fall2026/Lab%201/assets/video.mp4"
-  poster="assets/video-first-attempt-preview.jpg"
-  controls
-  muted
-  width="640">
-  Your browser can't play this video —
-  <a href="assets/video.mp4">download the MP4</a> instead.
-</video>
+https://github.com/user-attachments/assets/f9ebae2c-e59a-4585-9d5c-4eb7e9c6d6a6
 
 _[Download the MP4 directly](assets/video.mp4)_
 
