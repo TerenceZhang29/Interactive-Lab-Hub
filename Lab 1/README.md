@@ -281,6 +281,54 @@ _[Download the MP4 directly](assets/video.mp4)_
 acknowledging their contributions, and credit any other influences (YouTube,
 Github, Twitter, a friend who lent you a lamp) that informed your recreation.
 
+### Final Video Sketch
+
+https://github.com/user-attachments/assets/0c177aa3-7cba-4f61-a134-9292f47f5efa
+
+_[Watch or download the final MP4](assets/video.mp4) · 38 seconds_
+
+## AI and Technological Assistance Disclosure
+
+### 1. Storyboard
+
+We used **OpenAI Codex and its image-generation capability** to render the
+storyboard images and assemble the poster layouts. The submitted story direction,
+scene order, interaction beats, visual style, and layout constraints were defined
+and repeatedly steered by Jiesen. For example, the initial prompt specified the
+complete sequence and production loop (translated from the original Chinese):
+
+> “My story has four beats: approach a dim campfire; add wood, causing the fire
+> to burst and scare the person away; return cautiously as the fire stabilizes;
+> and watch the fire fade as the night ends. Use the reference template to
+> generate each scene as a sketch. I will review them first, and then use HTML to
+> assemble the storyboard with captions in the correct sequence. Keep a strictly
+> simple hand-drawn style.”
+
+After reviewing the output, Jiesen further directed Codex to “match the second
+version's layout, keep every image uncropped, remove the elaborate top and bottom
+text and SVG decoration, and retain only the most important information.” Codex
+executed these student-defined prompts, produced visual drafts, and revised the
+assets and layout inside this review loop. It also assisted with background
+research and copyediting the related documentation from student and teammate
+notes.
+
+### 2. Interaction Prototype
+
+We used **OpenAI Codex** to implement and debug the Tinkerbelle light-control
+script. Jiesen defined what the interaction should do, its causal responses,
+timing, colors, and transition behavior (translated from the original Chinese):
+
+> “Strike the match for 3 seconds, then light an ordinary orange flickering
+> flame. When I throw in the wood, make the fire jump once and, after 2 seconds,
+> burst into vivid orange-red. Gradually return the brightness and color to a
+> stable ordinary orange, then extinguish nonlinearly with a smooth curve.”
+
+Jiesen also instructed Codex to inspect the existing Tinkerbelle control script
+before implementation and permitted it to fill in only unspecified details needed
+to make the transitions smooth. Codex translated these requirements into Python,
+configured the environment, and debugged the timing curves; we tested, reviewed,
+performed, and recorded the resulting interaction.
+
 ---
 
 # Part 2 — ReMastering the light
