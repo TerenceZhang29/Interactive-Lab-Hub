@@ -344,6 +344,24 @@ wasn't clear.
 
 **Who were the other groups you kibitzed with? Add links to their project pages here.**
 **Summarize the feedback you got from your partners here.**
+> - https://github.com/Simonehina/Interactive-Lab-Hub/tree/Fall2026/Lab%201
+> - https://github.com/zg375/Interactive-Lab-Hub/tree/4a6babdbe33db81f0d222dfc877ac0c2b9f3c293/Lab%201
+> - https://github.com/eliu1122/Interactive-Lab-Hub
+
+> ***Feedback:***
+> Our representation of the flame is not obvious enough to some reviewers, as we are constrainted to represent it only using color. 
+> Sometimes the reviewers doesn't see that our masterwork is a campfire until the video is played for some time. And the reviewers need 
+> to combine the user actions (e.g. throwing the log) to see that it is a campfire.
+> 
+> Once the reviewer correctly identified the masterwork as a campfire, they understood
+> the player's goal: to start and maintain the fire while staying safe. They
+> found that the changing brightness clearly communicated the fire's response
+> to the player's actions, particularly the flare after adding wood and the
+> performer's retreat and gradual return.
+> 
+> Another main point of confusion was the wish at the end. Although the reviewer
+> recognized the gesture, they did not understand why the character made a wish
+> or how it related to the original campfire interaction.
 
 ## Remix, Update, or Critique the Master
 
@@ -365,6 +383,18 @@ your response engages with what your master was really doing.
 
 **Document everything here — especially the storyboard and video. Photos of the
 prototype are great too.**
+
+> We choose to fix the weakness of insufficient representation of the fire with just light.
+> We modified Tinkerbelle to display a fire animation instead of just color. 
+> We also removed the wishing gesture at the end of the interaction to avoid viewer confusion.
+> 
+> We record the interaction again to display the changes we made.
+https://github.com/user-attachments/assets/8b16f53a-4542-4922-b060-3d18c37ecf12
+_[Watch or download the final MP4](assets/lab1_week2_compressed.mp4)_
+
+## AI and Technological Assistance Disclosure
+We used **OpenAI CodeX** to update the Tinkerbelle file and make it display a fire animation
+instead of just color.
 
 ---
 
