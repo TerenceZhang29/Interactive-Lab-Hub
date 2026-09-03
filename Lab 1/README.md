@@ -389,7 +389,9 @@ prototype are great too.**
 > We also removed the wishing gesture at the end of the interaction to avoid viewer confusion.
 > 
 > We record the interaction again to display the changes we made.
+
 https://github.com/user-attachments/assets/8b16f53a-4542-4922-b060-3d18c37ecf12
+
 _[Watch or download the final MP4](assets/lab1_week2_compressed.mp4)_
 
 ## AI and Technological Assistance Disclosure
