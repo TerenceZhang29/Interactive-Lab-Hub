@@ -193,7 +193,13 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 
 ** Insert ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf)), storyboards for your ideas **
-
+> - Create a recording device for Pomodoro Technique. It will record 25 minutes work time and 5 minutes break time using tomato icons and container box. It will also record
+> how many sections the user have already completed. 
+> - For each work/break session, the timer will be denoted by a container box gradually filled with tomato. When the container is completely filled, the session time is up.
+> - Once a session is completed, the filled container will be added to a bigger box. User can customize how many box they want to fill per day, and how many container can be 
+> placed inside a single box.
+> - Once all boxes are filled, the user required Pomodoro session is finished. And a animation will show the boxes gets loaded into a truck and ships away in exchange for 
+> money, which user can accumulate over sessions.
 
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
