@@ -196,13 +196,21 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 
 ** Insert ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf)), storyboards for your ideas **
-> - Create a recording device for Pomodoro Technique. It will record 25 minutes work time and 5 minutes break time using tomato icons and container box. It will also record
-> how many sections the user have already completed. 
-> - For each work/break session, the timer will be denoted by a container box gradually filled with tomato. When the container is completely filled, the session time is up.
-> - Once a session is completed, the filled container will be added to a bigger box. User can customize how many box they want to fill per day, and how many container can be 
-> placed inside a single box.
-> - Once all boxes are filled, the user required Pomodoro session is finished. And a animation will show the boxes gets loaded into a truck and ships away in exchange for 
-> money, which user can accumulate over sessions.
+
+### Tomato Crate Timer (a Pomodoro clock)
+
+- A Pomodoro timer that counts time in tomatoes instead of digits: **1 tomato = 1 minute**. A 25-minute work session fills a crate with 25 tomatoes; a 5-minute break fills a small basket with 5.
+- The crate fills gradually, bottom-up, so remaining time can be read at a glance. When the crate is full, the session is over.
+- Each full crate is packed into a bigger box. The user sets how many boxes to fill per day and how many crates fit in one box, so the "Today" panel records how many sessions are already done.
+- Once every box is packed, the day's Pomodoro goal is met: an animation shows the boxes being loaded onto a truck and shipped away in exchange for money, which accumulates across sessions.
+
+![Tomato Crate Timer storyboard](assets/partE_storyboard.png)
+
+## AI Disclosure
+> - I used Claude to help me debug the configuration of my raspberrypi (the
+> WiFi config)
+> - I asked Claude to help me generate a visual storyboard based on my 
+> Pomodoro idea write up, and help me polish the text. Prompt I used: "help me generate a storyboard for partE: - Create a recording device for Pomodoro Technique. It will record 25 minutes work time and 5 minutes break time using tomato icons and container box. It will also record how many sections the user have already completed. - For each work/break session, the timer will be denoted by a container box gradually filled with tomato. When the container is completely filled, the session time is up. - Once a session is completed, the filled container will be added to a bigger box. User can customize how many box they want to fill per day, and how many container can be placed inside a single box. - Once all boxes are filled, the user required Pomodoro session is finished. And a animation will show the boxes gets loaded into a truck and ships away in exchange for money, which user can accumulate over sessions."
 
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
