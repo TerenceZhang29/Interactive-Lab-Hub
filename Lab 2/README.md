@@ -210,10 +210,13 @@ We strongly discourage literal digital or analog clock display: Be creative.
 > - I used Claude to help me debug the configuration of my raspberrypi (the
 > WiFi config)
 > - I asked Claude to help me generate a visual storyboard based on my 
-> Pomodoro idea write up, and help me polish the text. Prompt I used: "help me generate a storyboard for partE: - Create a recording device for Pomodoro Technique. It will record 25 minutes work time and 5 minutes break time using tomato icons and container box. It will also record how many sections the user have already completed. - For each work/break session, the timer will be denoted by a container box gradually filled with tomato. When the container is completely filled, the session time is up. - Once a session is completed, the filled container will be added to a bigger box. User can customize how many box they want to fill per day, and how many container can be placed inside a single box. - Once all boxes are filled, the user required Pomodoro session is finished. And a animation will show the boxes gets loaded into a truck and ships away in exchange for money, which user can accumulate over sessions."
+> Pomodoro idea write up, and help me polish the text. Prompt I used: "help me generate a storyboard for partE: - Create a recording device for Pomodoro Technique. It will record 25 minutes work time and 5 minutes break time using tomato icons and container box. It will also record how many sections the user have already completed. - For each work/break session, the timer will be denoted by a container box gradually filled with tomato. When the container is completely filled, the session time is up. - Once a session is completed, the filled container will be added to a bigger box. User can customize how many box they want to fill per day, and how many container can be placed inside a single box. - Once all boxes are filled, the user required Pomodoro session is finished. And a animation will show the boxes gets loaded into a truck and ships away in exchange for~ money, which user can accumulate over sessions."
 
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
+> https://github.com/certaindragon3/Interactive-Lab-Hub/tree/Fall2026/Lab%202
+> https://github.com/MortalJin/Interactive-Lab-Hub/tree/Fall2026/Lab%202
+> https://github.com/neeharavula/Interactive-Lab-Hub/tree/Fall2026/Lab%202
 
 # Lab 2 Part 2
 
@@ -223,6 +226,8 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 2. Look at and give feedback on the Part E. for at least 3 other people in the class and get 3 people to comment on your Part E!)
 **Put the feedback for your ideas here.**
+> It is missing a failure mode, where user failed to complete a 25 min work session. 
+> User could receive partial reward or even punishment when they fail to fill a crate with 25 tomatos. 
 
 ## Update your Lab Hub
 
