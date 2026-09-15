@@ -238,10 +238,13 @@ We strongly discourage literal digital or analog clock display: Be creative.
 Start small, pick just one element of your overall idea, just to show you have a handle on the code and components.
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
+[Link to code](tomato_clock.py)
 
 ## Make a short video of your modified barebones PiClock
 
 \*\*\***Take a video of your barely modified PiClock.**\*\*\*
+!_[Barebones tomato clock in action](https://github.com/user-attachments/assets/ae4726a9-d2e5-4f19-ae29-16bb844283a0)_
+[Link to mp4 file](assets/barebone.mp4)
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
@@ -259,6 +262,14 @@ Do take advantage of having done the previous iteration to refine and simplify y
 
 ** Insert any updates ideas, sketches, [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf))!, storyboards for your ideas **
 
+### Updated storyboard: adding a failure state
+
+Feedback on Part E pointed out a missing failure mode: what happens when a work session isn't finished. The updated storyboard adds it (panels 4–5):
+
+- **End early:** while paused, holding B for 2 seconds ends the current crate. A ring fills around B so it can't happen by accident, and the screen shows what the unfinished crate is worth before committing. Pressing A resumes instead.
+- **Partial reward:** the unfinished crate is sold loose for a share of a full crate's pay (tomatoes / 25). With $12 per box and 4 crates per box, a crate is worth $3.00, so 12 of 25 tomatoes earns $1.44. The partial crate is not packed, so it doesn't count toward the day's boxes, and the crate restarts from empty. Finishing always pays more than quitting.
+
+![Tomato Crate Timer storyboard v2](assets/part2_storyboard.png)
 
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
