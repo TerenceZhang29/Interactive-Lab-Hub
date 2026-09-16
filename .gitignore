@@ -5,3 +5,4 @@ venv*
 __*
 .venv*
 .venv/
+tomato_state.json

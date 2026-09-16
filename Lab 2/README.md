@@ -271,9 +271,55 @@ Feedback on Part E pointed out a missing failure mode: what happens when a work 
 
 ![Tomato Crate Timer storyboard v2](assets/part2_storyboard.png)
 
+### The finished clock
+
+The storyboard is implemented in two files:
+
+- [tomato_crate_timer.py](tomato_crate_timer.py) — state machine, buttons, and saved progress
+- [tomato_render.py](tomato_render.py) — all the drawing (pure PIL, no hardware, so any screen can be rendered to a PNG on a laptop)
+
+Run it on the Pi:
+
+```
+(venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 2 $ sudo systemctl stop piscreen.service
+(venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 2 $ python tomato_crate_timer.py
+(venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 2 $ python tomato_crate_timer.py --seconds-per-tomato 2   # fast demo
+(venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 2 $ python tomato_crate_timer.py --png-tour out            # render every screen, no hardware needed
+```
+
+**Controls**
+
+| Screen | A (top) | B (bottom) |
+| --- | --- | --- |
+| Setup | next value for the highlighted row | next row, wrapping round so settings can be revisited |
+| Setup · "Start day" row | — | — (**A + B together** starts the day) |
+| Work | pause | — |
+| Paused | resume | hold 2 s to end the crate early; let go sooner to cancel |
+| Partial (day ended early) | back to settings | back to settings |
+| Ready / break done | — | start the next crate |
+| Crate packed · box packed · shipping | — | skip ahead |
+| Day done | back to settings for a new day | back to settings for a new day |
+
+The two screens that record something you might want to sit with — a day given up on, and a day finished — wait for a button instead of moving on by themselves. The bank carries over into the new day.
+
+**How it works**
+
+- 1 tomato = 1 minute, drawn from elapsed time rather than counted loop passes, so the timer doesn't drift. 25 tomatoes fill a crate (work), 5 fill a basket (break).
+- Full crates are packed into boxes. When the day's boxes are packed, the truck animation plays and the pay lands in the bank.
+- Ending a crate early ends the day. The loose crate sells for `tomatoes / 25` of a crate's pay, any **full** boxes are shipped and paid right away, and crates sitting in an unfinished box are lost. The clock then returns to settings so the next session can be set up differently. Finishing always pays more than quitting.
+- Progress is saved to `tomato_state.json` after every change, so a restart picks up the same day, and the bank carries over between days.
+
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
 \*\*\***Take a video of your PiClock.**\*\*\*
+!_[Video demo for final project](https://github.com/user-attachments/assets/c9b6dcb5-56d9-4aff-8ae1-5d3bd2da5d43)_
+
+![Download video mp4 here](assets/final_clock.mp4)
+
+## AI Disclosure
+> - I used Claude to help me write the code for the clock and added 
+> documentation on user instructions
+> - For iterations on the clock (which details are not included in here), I came up with the ideas and areas to improve, and instructed Claude to implement
 
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
