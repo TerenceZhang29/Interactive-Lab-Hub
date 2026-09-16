@@ -67,8 +67,9 @@ class Button:
 
 
 class Timer:
-    def __init__(self, seconds_per_tomato):
+    def __init__(self, seconds_per_tomato, break_seconds_per_tomato=None):
         self.spt = seconds_per_tomato
+        self.break_spt = break_seconds_per_tomato or seconds_per_tomato
         self.speed = max(0.25, min(1.0, seconds_per_tomato / 60))   # shrink dwells in demo mode
         self.config = dict(DEFAULT_CONFIG)
         self.crates_done = 0
@@ -134,7 +135,8 @@ class Timer:
         return slots
 
     def tomatoes(self, now, limit):
-        return min(limit, int((now - self.started) // self.spt))
+        spt = self.break_spt if self.mode == "break" else self.spt
+        return min(limit, int((now - self.started) // spt))
 
     def dwell(self, mode):
         return max(1.5, DWELL[mode] * self.speed)
@@ -375,10 +377,27 @@ def main():
         png_tour(args.png_tour, args.seconds_per_tomato)
         return
 
+    disp, button_a, button_b = setup_hardware()
+    timer = Timer(args.seconds_per_tomato)
+    try:
+        while True:
+            now = time.monotonic()
+            button_a.poll(now)
+            button_b.poll(now)
+            timer.handle_input(now, button_a, button_b)
+            timer.update(now)
+            disp.image(render(timer.view(now)), 90)
+            time.sleep(TICK)
+    except KeyboardInterrupt:
+        timer.save()
+        blank(disp)
+
+
+def setup_hardware():
+    """The Mini PiTFT display (landscape, backlight on) and its two buttons."""
     import board
     import digitalio
     import adafruit_rgb_display.st7789 as st7789
-    from PIL import Image
 
     disp = st7789.ST7789(
         board.SPI(),
@@ -394,21 +413,12 @@ def main():
     backlight = digitalio.DigitalInOut(board.D22)
     backlight.switch_to_output()
     backlight.value = True
-    button_a, button_b = Button(board.D23), Button(board.D24)
+    return disp, Button(board.D23), Button(board.D24)
 
-    timer = Timer(args.seconds_per_tomato)
-    try:
-        while True:
-            now = time.monotonic()
-            button_a.poll(now)
-            button_b.poll(now)
-            timer.handle_input(now, button_a, button_b)
-            timer.update(now)
-            disp.image(render(timer.view(now)), 90)
-            time.sleep(TICK)
-    except KeyboardInterrupt:
-        timer.save()
-        disp.image(Image.new("RGB", (240, 135), (0, 0, 0)), 90)
+
+def blank(disp):
+    from PIL import Image
+    disp.image(Image.new("RGB", (240, 135), (0, 0, 0)), 90)
 
 
 if __name__ == "__main__":

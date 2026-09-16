@@ -291,6 +291,14 @@ Run it on the Pi:
 (venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 2 $ python tomato_crate_timer.py --png-tour out            # render every screen, no hardware needed
 ```
 
+For a video, [tomato_demo.py](tomato_demo.py) skips setup and speed-runs the real timer: the 25-tomato crate fills in 15 s and the break basket in 5 s. Buttons still work, and it saves to a throwaway file so the real day and bank are untouched.
+
+```
+(venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 2 $ python tomato_demo.py                                   # one crate + break, then waits on ready
+(venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 2 $ python tomato_demo.py --loop                            # crate, break, crate, ... until Ctrl-C
+(venv) pi@raspberrypi:~/Interactive-Lab-Hub/Lab 2 $ python tomato_demo.py --work-seconds 10 --break-seconds 3
+```
+
 **Controls**
 
 | Screen | A (top) | B (bottom) |
@@ -316,6 +324,14 @@ The two screens that record something you might want to sit with — a day given
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
 \*\*\***Take a video of your PiClock.**\*\*\*
+
+> Demo for when user actually finish the session:
+
+https://github.com/user-attachments/assets/7f9c1c77-1d31-4bbe-9515-d14aacc7539e
+
+[Download video mp4 here](assets/complete_demo.mp4)
+
+> Demo for when user ends the session early:
 
 https://github.com/user-attachments/assets/c9b6dcb5-56d9-4aff-8ae1-5d3bd2da5d43
 
