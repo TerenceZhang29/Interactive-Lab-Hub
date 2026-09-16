@@ -243,7 +243,9 @@ Start small, pick just one element of your overall idea, just to show you have a
 ## Make a short video of your modified barebones PiClock
 
 \*\*\***Take a video of your barely modified PiClock.**\*\*\*
+
 !_[Barebones tomato clock in action](https://github.com/user-attachments/assets/ae4726a9-d2e5-4f19-ae29-16bb844283a0)_
+
 [Link to mp4 file](assets/barebone.mp4)
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
