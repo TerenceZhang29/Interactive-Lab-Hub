@@ -244,7 +244,7 @@ Start small, pick just one element of your overall idea, just to show you have a
 
 \*\*\***Take a video of your barely modified PiClock.**\*\*\*
 
-!_[Barebones tomato clock in action](https://github.com/user-attachments/assets/ae4726a9-d2e5-4f19-ae29-16bb844283a0)_
+https://github.com/user-attachments/assets/ae4726a9-d2e5-4f19-ae29-16bb844283a0
 
 [Link to mp4 file](assets/barebone.mp4)
 
@@ -314,9 +314,10 @@ The two screens that record something you might want to sit with — a day given
 \*\*\***Put a copy of your code in your Lab 2 Github repo.**\*\*\*
 
 \*\*\***Take a video of your PiClock.**\*\*\*
-!_[Video demo for final project](https://github.com/user-attachments/assets/c9b6dcb5-56d9-4aff-8ae1-5d3bd2da5d43)_
 
-![Download video mp4 here](assets/final_clock.mp4)
+https://github.com/user-attachments/assets/c9b6dcb5-56d9-4aff-8ae1-5d3bd2da5d43
+
+[Download video mp4 here](assets/final_clock.mp4)
 
 ## AI Disclosure
 > - I used Claude to help me write the code for the clock and added 
