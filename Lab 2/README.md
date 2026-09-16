@@ -215,8 +215,10 @@ We strongly discourage literal digital or analog clock display: Be creative.
 
 **Put the names of the people you gave feedback to here. (Even better, add links to their repos here!)**
 > https://github.com/certaindragon3/Interactive-Lab-Hub/tree/Fall2026/Lab%202
+>
 > https://github.com/MortalJin/Interactive-Lab-Hub/tree/Fall2026/Lab%202
-> https://github.com/neeharavula/Interactive-Lab-Hub/tree/Fall2026/Lab%202
+> 
+> https://github.com/zg375/Interactive-Lab-Hub/tree/e91f5f8e997dfdaf5a03c0d61ae5432bec2a5c94/Lab%202
 
 # Lab 2 Part 2
 
