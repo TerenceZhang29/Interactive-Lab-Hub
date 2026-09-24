@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 800" width="1240" height="800" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <!-- device: 90x110, screen at top, speaker grille, LED drawn per panel at (45,96) -->
+    <g id="device">
+      <rect x="0" y="0" width="90" height="110" rx="12" fill="#2b2d42"/>
+      <rect x="10" y="10" width="70" height="34" rx="4" fill="#e7f3ff"/>
+      <g fill="#8d99ae">
+        <circle cx="27" cy="58" r="2"/><circle cx="36" cy="58" r="2"/><circle cx="45" cy="58" r="2"/><circle cx="54" cy="58" r="2"/><circle cx="63" cy="58" r="2"/>
+        <circle cx="27" cy="67" r="2"/><circle cx="36" cy="67" r="2"/><circle cx="45" cy="67" r="2"/><circle cx="54" cy="67" r="2"/><circle cx="63" cy="67" r="2"/>
+        <circle cx="27" cy="76" r="2"/><circle cx="36" cy="76" r="2"/><circle cx="45" cy="76" r="2"/><circle cx="54" cy="76" r="2"/><circle cx="63" cy="76" r="2"/>
+      </g>
+    </g>
+    <!-- person: head centred at (0,0), feet at y=90 -->
+    <g id="person" stroke="#333" stroke-width="3" stroke-linecap="round" fill="none">
+      <circle cx="0" cy="0" r="16" fill="#ffd9b3"/>
+      <path d="M0 16 V58 M0 30 L-24 48 M0 30 L24 48 M0 58 L-18 90 M0 58 L18 90"/>
+    </g>
+  </defs>
+
+  <rect width="1240" height="800" fill="#ffffff"/>
+  <text x="20" y="38" font-size="24" font-weight="bold" fill="#222">JARVIS Memo: storyboard</text>
+  <text x="330" y="38" font-size="15" fill="#555">A hands-free voice memo: wake it, dictate, confirm, recall.</text>
+
+  <!-- ===== Panel 1: hands busy ===== -->
+  <g transform="translate(20,60)">
+    <rect width="390" height="330" rx="10" fill="#fafafa" stroke="#333" stroke-width="2"/>
+    <circle cx="24" cy="24" r="13" fill="#222"/><text x="24" y="29" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">1</text>
+    <text x="46" y="30" font-size="16" font-weight="bold" fill="#222">Hands busy</text>
+    <ellipse cx="185" cy="78" rx="112" ry="38" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <circle cx="112" cy="116" r="6" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <circle cx="96" cy="124" r="3.5" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <text x="185" y="72" font-size="12" fill="#222" text-anchor="middle">Oh, I need to email my professor</text>
+    <text x="185" y="88" font-size="12" fill="#222" text-anchor="middle">about the Lab 3 extension…</text>
+    <use href="#person" x="70" y="140"/>
+    <rect x="110" y="205" width="120" height="22" rx="3" fill="#6c757d"/>
+    <ellipse cx="170" cy="200" rx="36" ry="7" fill="#333"/><line x1="206" y1="199" x2="236" y2="192" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+    <use href="#device" x="285" y="110"/>
+    <text x="330" y="142" font-size="11" fill="#555" text-anchor="middle">idle</text>
+    <circle cx="330" cy="206" r="7" fill="#adb5bd"/>
+    <text x="16" y="268" font-size="12.5" fill="#333">Hands full while cooking, the user remembers a</text>
+    <text x="16" y="286" font-size="12.5" fill="#333">to-do. No free hand to open a notes app.</text>
+  </g>
+
+  <!-- ===== Panel 2: wake ===== -->
+  <g transform="translate(425,60)">
+    <rect width="390" height="330" rx="10" fill="#fafafa" stroke="#333" stroke-width="2"/>
+    <circle cx="24" cy="24" r="13" fill="#222"/><text x="24" y="29" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">2</text>
+    <text x="46" y="30" font-size="16" font-weight="bold" fill="#222">Wake</text>
+    <rect x="30" y="70" width="84" height="32" rx="14" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <path d="M62 102 L70 118 L78 102" fill="#fff" stroke="#333" stroke-width="1.5"/><line x1="63" y1="102" x2="77" y2="102" stroke="#fff" stroke-width="2"/>
+    <text x="72" y="91" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">"JARVIS."</text>
+    <rect x="215" y="52" width="120" height="32" rx="14" fill="#eef6ff" stroke="#3a86ff" stroke-width="1.5"/>
+    <path d="M296 84 L310 104 L312 84" fill="#eef6ff" stroke="#3a86ff" stroke-width="1.5"/><line x1="297" y1="84" x2="311" y2="84" stroke="#eef6ff" stroke-width="2"/>
+    <text x="275" y="73" font-size="13" fill="#222" text-anchor="middle">♪ "Yes, sir?"</text>
+    <use href="#person" x="70" y="140"/>
+    <use href="#device" x="285" y="110"/>
+    <text x="330" y="142" font-size="11" fill="#1d4ed8" text-anchor="middle">listening…</text>
+    <circle cx="330" cy="206" r="7" fill="#3a86ff"/>
+    <rect x="112" y="192" width="162" height="22" rx="11" fill="#fff3cd" stroke="#e0a800"/>
+    <text x="193" y="207" font-size="11" fill="#6b4e00" text-anchor="middle">replies &lt; 0.5s after wake word</text>
+    <text x="16" y="268" font-size="12.5" fill="#333">Wake word. JARVIS chimes and answers right away</text>
+    <text x="16" y="286" font-size="12.5" fill="#333">so the user knows it heard. Screen and LED go blue.</text>
+  </g>
+
+  <!-- ===== Panel 3: dictate ===== -->
+  <g transform="translate(830,60)">
+    <rect width="390" height="330" rx="10" fill="#fafafa" stroke="#333" stroke-width="2"/>
+    <circle cx="24" cy="24" r="13" fill="#222"/><text x="24" y="29" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">3</text>
+    <text x="46" y="30" font-size="16" font-weight="bold" fill="#222">Dictate</text>
+    <rect x="14" y="42" width="258" height="70" rx="14" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <path d="M60 112 L68 124 L78 112" fill="#fff" stroke="#333" stroke-width="1.5"/><line x1="61" y1="112" x2="77" y2="112" stroke="#fff" stroke-width="2"/>
+    <text x="26" y="62" font-size="12" fill="#222">"Take a memo… email my professor</text>
+    <text x="26" y="80" font-size="12" fill="#222">about… <tspan fill="#c1121f" font-style="italic">(1s pause)</tspan> um… the Lab 3</text>
+    <text x="26" y="98" font-size="12" fill="#222">extension, before Friday."</text>
+    <use href="#person" x="70" y="140"/>
+    <use href="#device" x="285" y="110"/>
+    <text x="330" y="142" font-size="11" fill="#c1121f" text-anchor="middle">● REC 0:06</text>
+    <circle cx="330" cy="206" r="7" fill="#3a86ff"/>
+    <rect x="108" y="192" width="168" height="22" rx="11" fill="#fff3cd" stroke="#e0a800"/>
+    <text x="192" y="207" font-size="11" fill="#6b4e00" text-anchor="middle">ends turn after 1.5s of silence</text>
+    <text x="16" y="268" font-size="12.5" fill="#333">Memo mode. Thinking pauses are normal here, so</text>
+    <text x="16" y="286" font-size="12.5" fill="#333">JARVIS only ends the turn after 1.5s of silence</text>
+    <text x="16" y="304" font-size="12.5" fill="#333">(0.2–0.6s chopped the memo up in Part C).</text>
+  </g>
+
+  <!-- ===== Panel 4: confirm ===== -->
+  <g transform="translate(20,410)">
+    <rect width="390" height="330" rx="10" fill="#fafafa" stroke="#333" stroke-width="2"/>
+    <circle cx="24" cy="24" r="13" fill="#222"/><text x="24" y="29" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">4</text>
+    <text x="46" y="30" font-size="16" font-weight="bold" fill="#222">Read back</text>
+    <rect x="14" y="40" width="262" height="66" rx="14" fill="#eef6ff" stroke="#3a86ff" stroke-width="1.5"/>
+    <path d="M250 106 L292 122 L262 104" fill="#eef6ff" stroke="#3a86ff" stroke-width="1.5"/><line x1="251" y1="106" x2="263" y2="105" stroke="#eef6ff" stroke-width="2"/>
+    <text x="26" y="60" font-size="12" fill="#222">"Memo: 'Email my professor about the</text>
+    <text x="26" y="77" font-size="12" fill="#222">Lab 3 extension before Friday.'</text>
+    <text x="26" y="94" font-size="12" fill="#222">Shall I save it, sir?"</text>
+    <use href="#person" x="70" y="140"/>
+    <use href="#device" x="285" y="110"/>
+    <text x="330" y="136" font-size="10" fill="#8a5a00" text-anchor="middle">Email prof…</text>
+    <text x="330" y="149" font-size="10" fill="#8a5a00" text-anchor="middle">save?</text>
+    <circle cx="330" cy="206" r="7" fill="#f4a261"/>
+    <rect x="108" y="192" width="168" height="22" rx="11" fill="#fff3cd" stroke="#e0a800"/>
+    <text x="192" y="207" font-size="11" fill="#6b4e00" text-anchor="middle">~2s to transcribe (base.en)</text>
+    <text x="16" y="268" font-size="12.5" fill="#333">JARVIS reads the memo back before saving, so</text>
+    <text x="16" y="286" font-size="12.5" fill="#333">transcription errors (like "two" vs "too" in Part C)</text>
+    <text x="16" y="304" font-size="12.5" fill="#333">are caught now, not when the memo is needed.</text>
+  </g>
+
+  <!-- ===== Panel 5: fix and save ===== -->
+  <g transform="translate(425,410)">
+    <rect width="390" height="330" rx="10" fill="#fafafa" stroke="#333" stroke-width="2"/>
+    <circle cx="24" cy="24" r="13" fill="#222"/><text x="24" y="29" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">5</text>
+    <text x="46" y="30" font-size="16" font-weight="bold" fill="#222">Fix and save</text>
+    <rect x="14" y="44" width="190" height="34" rx="14" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <path d="M60 78 L68 122 L80 78" fill="#fff" stroke="#333" stroke-width="1.5"/><line x1="61" y1="78" x2="79" y2="78" stroke="#fff" stroke-width="2"/>
+    <text x="109" y="66" font-size="12" fill="#222" text-anchor="middle">"Change Friday to Thursday."</text>
+    <rect x="214" y="44" width="164" height="50" rx="14" fill="#eef6ff" stroke="#3a86ff" stroke-width="1.5"/>
+    <path d="M312 94 L322 108 L330 94" fill="#eef6ff" stroke="#3a86ff" stroke-width="1.5"/><line x1="313" y1="94" x2="329" y2="94" stroke="#eef6ff" stroke-width="2"/>
+    <text x="296" y="64" font-size="12" fill="#222" text-anchor="middle">"Changed to Thursday.</text>
+    <text x="296" y="81" font-size="12" fill="#222" text-anchor="middle">Saved, sir."</text>
+    <use href="#person" x="70" y="140"/>
+    <use href="#device" x="285" y="110"/>
+    <text x="330" y="136" font-size="10" fill="#1b7a5a" text-anchor="middle">✓ Memo 3</text>
+    <text x="330" y="149" font-size="10" fill="#1b7a5a" text-anchor="middle">saved</text>
+    <circle cx="330" cy="206" r="7" fill="#2a9d8f"/>
+    <rect x="108" y="192" width="168" height="22" rx="11" fill="#fff3cd" stroke="#e0a800"/>
+    <text x="192" y="207" font-size="11" fill="#6b4e00" text-anchor="middle">"yes" or 3s of silence → save</text>
+    <text x="16" y="268" font-size="12.5" fill="#333">The user fixes a mistake by voice instead of</text>
+    <text x="16" y="286" font-size="12.5" fill="#333">starting over. "Yes", or 3s of silence, saves it.</text>
+    <text x="16" y="304" font-size="12.5" fill="#333">The LED turns green.</text>
+  </g>
+
+  <!-- ===== Panel 6: recall ===== -->
+  <g transform="translate(830,410)">
+    <rect width="390" height="330" rx="10" fill="#fafafa" stroke="#333" stroke-width="2"/>
+    <circle cx="24" cy="24" r="13" fill="#222"/><text x="24" y="29" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">6</text>
+    <text x="46" y="30" font-size="16" font-weight="bold" fill="#222">Recall, later</text>
+    <rect x="14" y="70" width="166" height="34" rx="14" fill="#fff" stroke="#333" stroke-width="1.5"/>
+    <path d="M60 104 L68 122 L80 104" fill="#fff" stroke="#333" stroke-width="1.5"/><line x1="61" y1="104" x2="79" y2="104" stroke="#fff" stroke-width="2"/>
+    <text x="97" y="92" font-size="12" fill="#222" text-anchor="middle">"JARVIS, read my memos."</text>
+    <rect x="190" y="36" width="190" height="62" rx="14" fill="#eef6ff" stroke="#3a86ff" stroke-width="1.5"/>
+    <path d="M312 98 L322 110 L330 98" fill="#eef6ff" stroke="#3a86ff" stroke-width="1.5"/><line x1="313" y1="98" x2="329" y2="98" stroke="#eef6ff" stroke-width="2"/>
+    <text x="202" y="56" font-size="12" fill="#222">"You have 3 memos. First:</text>
+    <text x="202" y="72" font-size="12" fill="#222">email your professor about</text>
+    <text x="202" y="88" font-size="12" fill="#222">the Lab 3 extension…"</text>
+    <use href="#person" x="70" y="140"/>
+    <use href="#device" x="285" y="110"/>
+    <text x="330" y="130" font-size="8.5" fill="#333" text-anchor="middle">1 Email prof</text>
+    <text x="330" y="140" font-size="8.5" fill="#333" text-anchor="middle">2 Buy milk</text>
+    <text x="330" y="150" font-size="8.5" fill="#333" text-anchor="middle">3 Call mom</text>
+    <circle cx="330" cy="206" r="7" fill="#2a9d8f"/>
+    <text x="16" y="268" font-size="12.5" fill="#333">Later, the user asks for the memos. JARVIS reads</text>
+    <text x="16" y="286" font-size="12.5" fill="#333">them aloud and lists them on the screen.</text>
+  </g>
+
+  <!-- LED legend -->
+  <g transform="translate(20,770)" font-size="13" fill="#333">
+    <text x="0" y="5" font-weight="bold">LED:</text>
+    <circle cx="52" cy="0" r="7" fill="#adb5bd"/><text x="64" y="5">idle</text>
+    <circle cx="122" cy="0" r="7" fill="#3a86ff"/><text x="134" y="5">listening</text>
+    <circle cx="222" cy="0" r="7" fill="#f4a261"/><text x="234" y="5">thinking / confirming</text>
+    <circle cx="392" cy="0" r="7" fill="#2a9d8f"/><text x="404" y="5">saved</text>
+  </g>
+</svg>
