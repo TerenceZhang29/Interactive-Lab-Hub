@@ -1,0 +1,16 @@
+# Lab 3 Part 2 — extra hardware libraries for speech-scripts/jarvis_memo.py
+# Install on top of requirements.txt, inside the same .venv:
+#   uv pip install -r requirements-part2.txt
+
+# --- SparkFun Qwiic Button (green LED) over I2C ---
+sparkfun-qwiic-button
+smbus2
+
+# --- Adafruit MiniPiTFT (ST7789) over SPI ---
+Adafruit-Blinka
+adafruit-circuitpython-rgb-display
+lgpio
+pillow
+
+# --- MPR121 capacitive touch sensor (tap shortcuts) ---
+adafruit-circuitpython-mpr121
