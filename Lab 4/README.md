@@ -286,9 +286,27 @@ As you develop your Feast Automata concept, consider where the sensor and actuat
 
 **\*\*\*Draw 5 sketches that explore different physical arrangements for your sensing and actuation.\*\*\***
 
+> ![Five Feast Automata sketches: over-pour head shaker, tube man coaster, cheers buddy, snack guard, condiment passer cart](images/feast_sketches.svg)
+
+> 1. A figure that will shake it head if you pour too much drink into the glass. Sensor: Copper tape strips up the outside of the glass connected to capacitive sensor. Movement: The figure's neck, shaking its head. 
+> 2. A inflatable tube man that will inflate when you put down the cup. Sensor: distance sensor inside the coaster notices when the cup is put down. Movement: The inflatable tube man getting inflated. 
+> 3. Cheers buddy. Sensor: the distance sensor in a coaster notices when the cup is lifted, as in the Windmill Coaster example.
+Movement: a servo in the figure's shoulder raises its arm and a small cardboard glass, then lowers it when you put the cup down.
+> 4. Snack guard. Sensor: the proximity/gesture sensor (APDS-9960) at the rim of the bowl counts each time a hand reaches in.
+Movement: after the third reach, a servo swings a "stop" arm or lid over the bowl for a few seconds.
+> 5. Condiment passer wheel carts. Sensor: the joystick to control which condiment and the movement direction of the wheel carts. Movement: the joystick remotely controls the wheel carts to move the condiment across the table.
+
 **\*\*\*What questions do these sketches raise? What do you need to physically prototype to answer them?\*\*\***
 
+> 1. How would the sensor sense through the glass/bottle for the water level? Can the glass still be picked up and drunk from with wires attached? -> Need to build a mock-up with wire in place to test out the feasibility.
+> 2. What is the best material for the tube man to make it float like a real one? -> Need to try different materials for the visual appearance.
+> 3. Will the movement intervine with user's action to pick up/put down the cup? -> Need to see if the design can be spacious enough and happen on time to make the "cheers" discoverable.
+> 4. Does the rim sensor count one reach as one, or does it double-count the hand going in and coming out? -> Need to test out that in action and fine-tune when will it count.
+> 5. Do the bottles stay upright when it starts and stops? → Load the cart with real weight and test it out.
+
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
+
+> I am picking the third idea Cheers buddy. First reason is I like to drink. Second reason is it contains only a simple movement, that will be easier for me to fine-tune and adjust.
 
 Build a cardboard or other low-fidelity physical prototype of your design.
 
