@@ -306,8 +306,6 @@ Movement: after the third reach, a servo swings a "stop" arm or lid over the bow
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
-> I am picking the third idea Cheers buddy. First reason is I like to drink. Second reason is it contains only a simple movement, that will be easier for me to fine-tune and adjust.
-
 Build a cardboard or other low-fidelity physical prototype of your design.
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
