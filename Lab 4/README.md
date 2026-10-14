@@ -1,5 +1,7 @@
 # Ph-UI!!!
 
+> The course instructions are kept in ordinary text. My experiment notes, responses, and images appear in blockquotes.
+
 <details>
 	<summary><strong>Instructions for Students (Click to Expand)</strong></summary>
   
@@ -144,6 +146,14 @@ Twizzler 10 touched!
 Twizzler 6 touched!
 ```
 
+> I connected the MPR121 through Qwiic and tested the touch pads directly. I then connected an alligator lead to pad 0 and touched the exposed metal at the other end. The terminal detected touch and release events on channel 0.
+>
+> In the alligator-clip test, three clear touches lasted approximately 2.77, 2.35, and 4.58 seconds. There were also additional events during the test. After the final release, no new events appeared for approximately 60 seconds, and no other channels triggered. An earlier direct-pad test had short repeated events and one unusually long touch reading, so I have not yet established the cause of those readings.
+>
+> This test used the exposed metal of the alligator clip; I have not yet tested a separate food or foil object.
+>
+> ![MPR121 Qwiic connection and alligator leads](%E6%8E%A5%E7%BA%BF.jpeg)
+
 ---
 
 ### Part B
@@ -167,6 +177,12 @@ Connect it to your pi with Qwiic connector and try running the three example scr
 ...
 ```
 
+> I replaced the MPR121 with the APDS-9960 using the Qwiic connection. In a 20-second proximity test, the raw readings ranged from 0 to 239. These are raw proximity values, not distances in centimeters.
+>
+> A separate 20-second light/color check returned 19 RGB and clear-channel samples. The clear-channel readings ranged from 39 to 10,949 during the shading exercise. This confirms changing light readings and working RGB data retrieval; it does not establish accurate color recognition.
+>
+> Neither the first 20-second gesture check nor a separate 30-second check returned any direction events. Gesture recognition remains unverified. I have not established whether the cause is the motion, sensor placement, or configuration.
+
 You can go the the [Adafruit GitHub Page](https://github.com/adafruit/Adafruit_CircuitPython_APDS9960) to see more examples for this sensor!
 
 #### Rotary Encoder 
@@ -188,6 +204,10 @@ Connect it to your pi with Qwiic connector and try running the example script, i
 
 You can go to the [Adafruit Learn Page](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder/python-circuitpython) to learn more about the sensor! The sensor actually comes with an LED (neo pixel): Can you try lighting it up? 
 
+> The encoder was detected at address 0x36 with product ID 4991. The first check verified communication and sent red, green, and blue commands to the board's NeoPixel, then turned it off. I visually confirmed all three colors. The LED check used seesaw pin 6, following the linked Adafruit example.
+>
+> A separate 25-second input check recorded the position increasing from 0 to 75 and then decreasing to 61 when the rotation was reversed. It also recorded two complete button presses and releases. These results confirm rotation in both directions, the pushbutton, and visible LED output.
+
 #### Joystick 
 
 
@@ -202,6 +222,10 @@ Connect it to your pi with Qwiic connector and try running the example script to
 ```
 (circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python joystick_test.py
 ```
+
+> I connected the Qwiic joystick and checked both axes and its pushbutton. The detected firmware version was v2.6. During a 45-second check, both X and Y ranged from 0 to 1023, and the stick returned to approximately X=508, Y=510 after the directional inputs.
+>
+> The first check contained no button changes. A separate 20-second button check recorded 1 → 0 → 1, confirming one complete press and release: 0 was pressed and 1 was released.
 
 You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Joystick_Py) to learn more about the sensor!
 
@@ -220,6 +244,10 @@ Connect it to your pi with Qwiic connector and try running the example script to
 ```
 (circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python qwiic_distance.py
 ```
+
+> I connected the VCNL4040 and ran a 25-second proximity check. The 63 readings ranged from 0 to 20,869, with repeated high-to-low changes during the near/far exercise. Several low periods were around 3–4, and the final reading was 3.
+>
+> The test confirms a changing proximity signal suitable for exploring object-presence detection. These are raw readings, not calibrated distances. A threshold for the final interaction still needs to be chosen using the actual object and sensor placement.
 
 You can go to the [SparkFun GitHub Page](https://github.com/sparkfun/Qwiic_Proximity_Py) to learn more about the sensor and see other examples
 
@@ -249,6 +277,13 @@ Run the example:
 python pi_servo_hat_test.py
 ```
 For more details and advanced usage, see the [official SparkFun Servo pHAT documentation](https://learn.sparkfun.com/tutorials/pi-servo-phat-v2-hookup-guide/all#resources-and-going-further).
+
+> I checked the SIG, 5V, and GND connections and attempted an unloaded, finite channel-0 test using [servo_center_test.py](servo_center_test.py). The test sends two short sequences around the center pulse, using approximately 1.417–1.583 ms pulses, and finishes at 1.5 ms.
+>
+> The channel-0 commands completed, and the controller registers matched the intended center configuration. However, I observed no servo movement, including on a repeat run.
+>
+> I then moved the same servo to channel 1 and repeated the same short test using `python servo_center_test.py --channel 1`. The servo moved back and forth normally and returned to center. This verifies basic unloaded actuation on channel 1. The reason for the channel-0 failure is still unresolved; I have not established whether it was contact, wiring, or a channel fault. Future integration will use channel 1.
+
 A servo motor is a rotary actuator that allows for precise control of angular position. The position is set by the width of an electrical pulse (PWM). You can read [this Adafruit guide](https://learn.adafruit.com/adafruit-arduino-lesson-14-servo-motors/servo-motors) to learn more about how servos work.
 
 ---
@@ -521,3 +556,5 @@ For submission, the readme.md page for this lab should be edited to include the 
 * Upload any materials that explain what you did, into your lab 4 repository, and link them in your lab 4 readme.md.
 * Link your Lab 4 readme.md in your main Interactive-Lab-Hub readme.md. 
 * Labs are due on Mondays, make sure to submit your Lab 4 readme.md to Canvas.
+
+> **AI assistance:** Codex helped set up the isolated Python environment, run and summarize sensor checks over SSH, and draft these experiment notes. I connected the hardware and performed the physical touch actions. The notes distinguish observed readings from tests that have not been completed.
