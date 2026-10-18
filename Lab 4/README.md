@@ -340,9 +340,17 @@ Movement: after the third reach, a servo swings a "stop" arm or lid over the bow
 
 **\*\*\*Pick one design to prototype and explain why.\*\*\***
 
+> We picked design 2, the sugar cube dropper. It has the clearest sense → act loop (cup goes down, sugar goes in), it only needs one sensor and one servo, and it raised the most physical questions to answer with cardboard: how cubes are held, released, and guided into the cup.
+>
+> **Pivot: from a gate to a rotating wheel.** In the sketch, a servo opened a gate under the hopper so a cube could slide out. Once we started building it, a gate looked hard to control. How many cubes fall depends on how long the gate stays open and how the cubes are stacked, so it could release zero, one, or several at once, and cubes could jam half-way through. We switched to a rotating wheel instead: a cardboard cross mounted on the servo horn divides the space under the hopper into four pockets. Each pocket holds one cube, and each 90° turn of the servo carries one pocket from the hopper to the chute and drops its cube. This is easier to control with the servo, since we just send it to fixed angles instead of timing an open/close, and it makes the dose easy to set: one turn for one cube, two turns for two.
+>
+> One limitation: our servo (Miuzei MS18 micro servo) only rotates 0–180°, not continuously. So the wheel can step 0° → 90° → 180° to drop up to two cubes, then has to swing back to 0° to reset before the next round. We still need to test whether the pockets pick up or drop extra cubes on the way back, and whether the micro servo has enough torque to push the wheel through a full hopper without stalling.
+
 Build a cardboard or other low-fidelity physical prototype of your design.
 
 **\*\*\*Document your rough prototype with photos and/or video.\*\*\***
+
+> <img src="images/cardboard_prototype_8418.jpg" width="32%" alt="Cardboard prototype mounted on the servo, wired to the Servo pHAT on the Pi"> <img src="images/cardboard_prototype_8419.jpg" width="32%" alt="Side view of the cardboard piece attached to the servo horn"> <img src="images/cardboard_prototype_8420.jpg" width="32%" alt="Top view of the cardboard prototype held in hand">
 
 
 ---
