@@ -300,6 +300,10 @@ All correct, and better than YOLO on the same photo (Part A): it calls the bottl
 > No, that's unusual if someone is at the door at 3 am. It's unusual for someone to be at the door at such a late hour. The timing doesn't align with typical routines.
 
 The JSON schema keeps the 0.8b model short, fast and easy for a program to read. The 0.6b model contradicts itself in the first sentence ("No, that's unusual"), so free text from it can't be trusted for a yes/no decision. **Takeaway for Part 2:** give the model the data, ask for a structured answer, and never use it as a source of facts.
+
+**Bonus: question 1 again with `--think`** (`qwen3.5:0.8b`, **582.6 s**, cut off with no answer at all)
+
+The model spent almost ten minutes reasoning in a loop. The same few lines repeat 37 times ("Wait, I think I need to check if there's a specific historical fact about the founding of Roosevelt Island…", "It was founded in 1857 by John Quincy Adams? No."), and it never got as far as an answer. It also heated the Pi from about 75 °C to 85 °C, enough to trigger the Pi's soft temperature limit (`vcgencmd get_throttled` = `0xe0008`). The run took 22× longer than with thinking off and produced nothing, which is why `think: false` is the rule on a Pi.
 </details>
 
 
