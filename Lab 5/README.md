@@ -221,6 +221,23 @@ Consider how you might use this position based approach to create an interaction
 
 \*\*\***Include a screenshot or short video of the hand pose demo, and write how you might use face, hand or body pose tracking in your observant system.**\*\*\*
 
+> I ran `hand_pose.py` on jarvis's desktop and took a screenshot every 2 s. From left to right: barely open (2%), wide open (86%), half open (39%), and pinched shut (0%; the midpoint turns green below 50 px).
+>
+> ![hand pose pinch volume control](Readme_files/partc_pinch.jpg)
+>
+> * **The pinch works well.** MediaPipe tracked all 21 landmarks at 13–34 fps, even with my hand a few inches from the lens. The thumb-to-index distance ranged from 6 to 401 px across 338 frames, and the volume followed it smoothly.
+> * **On my first try, the Quiet Coyote registered only once** in about 15 s, with my hand a few inches from the lens. The rule (`length > 100 and length1 > 100 and length2 < 100 ...`) compares fingertip distances in **raw pixels**. Up close my fingers are far apart in pixels, so the "< 100" checks fail.
+> * **On the second try, with my hand at about arm's length, it triggered in 187 of the 194 frames where it saw my hand.** The volume went straight to 0%:
+>
+>   ![quiet coyote detected](Readme_files/partc_coyote.jpg)
+>
+>   So the gesture is reliable, but only at the distance the thresholds were tuned for. A sturdier rule would divide each distance by the hand's size (say, wrist to the middle-finger knuckle), so it works at any distance. It could also ask the gesture to hold for about half a second, so a single lucky frame can't trigger it.
+>
+> **How I'd use pose tracking in my observant system** *(draft, edit to match your design)*
+> * **Hand, before bed:** a Quiet Coyote held up to the camera for one second is the bedtime hand-off ("I'm going to sleep, start watching"). The device acknowledges it by dimming the screen. It's a gesture nobody makes by accident and it needs no button, which fits the thirty-second ritual in Part G. Here, holding still for a moment matters more than the exact pixel thresholds.
+> * **Body, while asleep:** YOLO only says "a person"; body pose says *what they're doing*. Comparing shoulder and hip landmarks tells standing from sitting from lying down. That makes it possible to log "got up at 3:12 and stood by the desk for 4 minutes" instead of "1 person(s) at center/close", without storing any face or image.
+> * **Face:** I'd avoid it overnight, for privacy and because it fails in the dark and from behind (Part B showed my back scores as well as my face for YOLO, but there are no face landmarks from behind).
+
 
 ## Part D. 
 ### Reason: run Qwen on the Pi with Ollama
