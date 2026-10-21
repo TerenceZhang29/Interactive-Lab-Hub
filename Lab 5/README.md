@@ -168,6 +168,32 @@ Then press q to quit and run it again with a flag. Each one changes a single thi
 \*\*\***Include a short video or screenshots of your experiments with the person detection. Write down three situations where it did not see you, or saw a person who was not there, and what you think the cause was.**\*\*\*
 
 
+> I recorded four 7-second runs back to back on jarvis: the default, `--conf 0.2`, `--conf 0.7` and `--all`. The webcam was at 640×480 and the model looked at 320 px, the same settings as `yolo_person.py`. It ran headless at 8–11 fps, and the Pi sat at 75 °C with no cooler. The GIF plays all four runs at 1.7× speed:
+>
+> ![YOLO person detection, four variants](Readme_files/partb_yolo.gif)
+>
+> | default (`conf 0.4`) | `--conf 0.2` |
+> |---|---|
+> | ![default](Readme_files/partb_default.jpg) | ![conf 0.2](Readme_files/partb_conf02.jpg) |
+> | **`--conf 0.7`** | **`--all`** |
+> | ![conf 0.7](Readme_files/partb_conf07.jpg) | ![all classes](Readme_files/partb_all.jpg) |
+>
+> **Three situations where it got me wrong**
+>
+> 1. **It lost me when my head left the frame** (`--all` run, 2.9 s, 3.2 s and 3.8 s). I was standing right in front of the camera, so only my shirt and jeans showed, cut off at the top and the left edge. My score fell from 0.66 to 0.45, and in three frames I disappeared completely, even though I fill a third of the image. *Cause:* most of what the model relies on is the head, shoulders and a whole silhouette. A close-up torso, blurred by motion, is mostly a dark rectangle of fabric.
+>
+>    ![missed: head out of frame](Readme_files/partb_miss.jpg)
+> 2. **It saw a person who wasn't there at the left edge** in every run: x ≈ 20, about 200–250 px tall, scored anywhere from 0.3 to 0.88 and flickering from frame to frame. It's a dark shape cut off by the edge of the frame. *Cause:* a tall, dark, vertical shape at the edge looks like someone half in frame, which is a very common pose in the photos YOLO learned from (COCO). Because the score flickers, a naive counter would report people coming and going all night.
+> 3. **At `--conf 0.2` it saw extra people next to me**, as faint boxes at x ≈ 500–545 (conf 0.20–0.21) while I moved, beside my real box at 0.73–0.80. *Cause:* these are the model's weaker second guesses about my own body. The default threshold of 0.4 hides them, and a threshold of 0.2 counts them as more people.
+>
+> **Other observations**
+> * **Close to the camera, facing it or not, I'm a person at 0.85–0.93.** My back scored about as high as my face (0.87 in the `conf 0.7` still), and motion blur while I sat down barely mattered.
+> * **`--conf 0.2`** added 29 boxes the default would have dropped, mostly the ghosts and the edge sliver. When I leaned so only my torso was in the frame, I still got a box, but only at 0.56.
+> * **`--conf 0.7`** was stable: I was the only box in most frames, but the edge "person" came and went. So a high threshold doesn't remove a false positive, it only makes it flicker.
+> * **`--all`** found the water bottle on the right (0.57–0.83) every time it was visible. It also called a 33 px sliver a `book` and the chair with a jacket on it a `bed` (0.44), and in three frames it found nothing at all.
+>
+> For the overnight system, this means: **don't count raw boxes frame by frame.** Ignore the frame edges, ask for a detection to hold for several samples before it counts, and treat "a bed in the room" with suspicion.
+
 
 ## Part C. 
 ### See more: hands and pose with MediaPipe
