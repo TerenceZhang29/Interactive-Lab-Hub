@@ -98,6 +98,10 @@ Now a photo of your own. Plug in the webcam and take one with `snap.py` (`--dela
 
 Every run gets its own numbered folder, so this one is in `runs/predict2/snap.jpg`; the command prints where it saved. Keep `snap.jpg`, you will show it to Qwen in Part D.
 
+> YOLO26n on my own `snap.jpg`: it labels the shaker bottle a `cup` (0.64), the Pi's screen a `cell phone` (0.45) and the desk a `dining table` (0.43). Close enough, but none of these are the real object, and the black power adapter isn't detected at all.
+>
+> ![YOLO detections on snap.jpg](Readme_files/snap_yolo.jpg)
+
 ### Ollama: install it and pull Qwen
 
 [Ollama](https://ollama.com) runs language models locally. Nothing leaves the Pi: no API key, no internet after the download.
@@ -115,6 +119,8 @@ pi@raspberrypi:~ $ ollama list
 | `qwen3:0.6b` | ~0.5 GB | text only, smaller and faster (~16 tokens/s on a Pi 5) |
 
 \*\*\***Include a screenshot of `ollama list` showing your models.**\*\*\*
+
+> ![ollama list on jarvis showing qwen3.5:0.8b and qwen3:0.6b](Readme_files/ollama_list.png)
 
 
 ## Part B. 
@@ -202,7 +208,34 @@ A 0.8B model is slow and sometimes wrong. It will invent events that are not in 
 \*\*\***Ask Qwen three questions to answer. Paste the questions, the answers and how long each took. Try one of them with `qwen3:0.6b` and compare.**\*\*\*
 
 <details>
-  Q&A here
+<summary>Q&A (run on jarvis, Pi 5 8 GB, thinking off, default 120-token cap)</summary>
+
+**1. "Tell me a bit about the history of Roosevelt Island."**
+
+`qwen3.5:0.8b` (26.0 s):
+> Roosevelt Island is a historic neighborhood on Manhattan's East Side, originally built as an exclusive residential enclave for wealthy New Yorkers during the late 19th century. It was designed to separate the upper-class from the rest of the city while serving as a prestigious commercial hub and social center. The island has been home to many significant figures in American history, including President Franklin D. Roosevelt, who lived in his luxurious mansion on the property. Today, it remains a popular tourist destination known for its beautiful waterfront views and vibrant nightlife.
+
+`qwen3:0.6b` (10.6 s):
+> Roosevelt Island was established in 1910 as a temporary refuge for the displaced and homeless, offering a safe haven for the isolated. It became a significant community center and a hub for the local population, fostering growth and connection. Today, it remains a vital part of the community and a symbol of resilience and hope.
+
+Fact check: the 0.8b model gets essentially nothing right. The island was never a wealthy enclave, FDR never lived there, and it isn't known for nightlife. It also ignored the three-sentence limit. The 0.6b model is vaguer, and because of that a little closer: the island really did hold hospitals, an asylum and a workhouse, but "1910" is made up. Neither one mentions Blackwell's Island, Welfare Island, the 1973 renaming or Cornell Tech. Both answer confidently and fluently, which makes them dangerous as a source of facts.
+
+**2. `--image snap.jpg` "What is in this photo?"** (`qwen3.5:0.8b`, 32.6 s)
+> A clear plastic water bottle with a gray lid sits on a white table next to a black power strip and several cables.
+
+All correct, and better than YOLO on the same photo (Part A): it calls the bottle a bottle and sees the power strip, which YOLO missed. It was also the slowest call, even though the answer is only one sentence, so most of that time goes into processing the image.
+
+**3. `--json` "Someone was at the door at 3 am. Is that unusual?"**
+
+`qwen3.5:0.8b` (4.9 s):
+```json
+{ "headline": "Unusual: Someone at 3 AM", "unusual": true }
+```
+
+`qwen3:0.6b` (2.3 s, plain text):
+> No, that's unusual if someone is at the door at 3 am. It's unusual for someone to be at the door at such a late hour. The timing doesn't align with typical routines.
+
+The JSON schema keeps the 0.8b model short, fast and easy for a program to read. The 0.6b model contradicts itself in the first sentence ("No, that's unusual"), so free text from it can't be trusted for a yes/no decision. **Takeaway for Part 2:** give the model the data, ask for a structured answer, and never use it as a source of facts.
 </details>
 
 
