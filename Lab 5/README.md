@@ -339,6 +339,44 @@ Qwen (18.4 s):
 One person came in from the right, moved close to the camera, and left after about half a minute. ...
 ```
 
+> **My run.** Instead of walking through the room, I played a video with people in it on my phone, which lay on the desk under the webcam. I watched for 30 s with the window open on jarvis.
+>
+> ![YOLO to Qwen window: a face on the phone screen, reading "nobody"](Readme_files/parte_window.jpg)
+>
+> ```
+> 21:03:18 nobody
+> 21:03:20 1 person(s) at center/far
+> 21:03:20 nobody
+> 21:03:27 1 person(s) at right/far
+> 21:03:29 nobody
+> 21:03:37 1 person(s) at right/far
+> 21:03:38 nobody
+> 21:03:39 1 person(s) at right/far
+> 21:03:39 nobody
+> 21:03:42 1 person(s) at right/far
+> 21:03:43 nobody
+>
+> 11 lines saved to watch_log.txt
+> asking Qwen...
+>
+> Qwen (19.7 s):
+> There was only one person present throughout the entire 31-second observation period. They were located at various positions:
+> initially at the center/far and then shifted to the right/far locations. No changes occurred in their location or activity during
+> this time; they remained stationary at these spots without moving or interacting with others.
+> ```
+>
+> **The detector mostly missed the people on screen.** In the still above, a large, clear face in profile reads as `nobody`. Across the 30 s, the people in the video were detected for only about a second at a time, five times in all. The likely causes are the glare on the phone's glass and the video showing only a cropped head and shoulders, the same weakness as the partial body in Part B. A person on a screen is still an easy way to fool a camera system, but this time the fool went the other way.
+>
+> **The reasoner then got the log wrong.** The log is mostly `nobody`, with short flickers of one person, yet Qwen said one person was there "throughout" and that "no changes occurred". In the same answer it also said they "shifted", which contradicts that. The changes-only log helps it here: 11 lines instead of about 60. Even so, a 0.8B model doesn't reason well about *gaps* between lines, so it reads "a line exists" as "someone is there".
+>
+> **Same log, `--json`** (4.3 s): `{"people": 1, "activity": "standing", "unusual": false}`. It's faster and easy for code to read, but "standing" is made up: the log has no information about posture.
+>
+> **A hand-edited contradiction.** As the script suggests, I inserted a fake line, `21:03:30 2 person(s) at left/close, right/close`, between two `nobody` lines one second apart. That's physically implausible: two people appearing close to the camera and vanishing within a second.
+> * With the default question (13.4 s), Qwen says *"There were 2 people present throughout"*. It swallowed the fake line and made it the headline.
+> * Asked directly *"Is there anything in this log that looks like a detector error rather than a real event?"* (17.1 s), it says yes, but for the wrong reasons. It flags ordinary `nobody` → person changes and two different lines that share the timestamp 21:03:39. It never mentions the planted two-person line.
+>
+> **For Part 2:** the reasoner believes whatever the interpreter writes and can't separate noise from events. So the cleanup has to happen *before* the log. Require a reading to hold for a few samples before it's logged, and let the interpreter, not Qwen, decide what counts as an event. Then give Qwen only that tidied log and a narrow question, ideally with a JSON answer that a display can show directly.
+
 ---
 
 # Lab 5 Part 2: Overnight Sensation

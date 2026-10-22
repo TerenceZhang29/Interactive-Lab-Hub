@@ -1,0 +1,11 @@
+21:03:18 nobody
+21:03:20 1 person(s) at center/far
+21:03:20 nobody
+21:03:27 1 person(s) at right/far
+21:03:29 nobody
+21:03:37 1 person(s) at right/far
+21:03:38 nobody
+21:03:39 1 person(s) at right/far
+21:03:39 nobody
+21:03:42 1 person(s) at right/far
+21:03:43 nobody
