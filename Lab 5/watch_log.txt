@@ -1,11 +1,13 @@
-21:03:18 nobody
-21:03:20 1 person(s) at center/far
-21:03:20 nobody
-21:03:27 1 person(s) at right/far
-21:03:29 nobody
-21:03:37 1 person(s) at right/far
-21:03:38 nobody
-21:03:39 1 person(s) at right/far
-21:03:39 nobody
-21:03:42 1 person(s) at right/far
-21:03:43 nobody
+21:07:22 nobody
+21:07:33 1 person(s) at center/far
+21:07:34 nobody
+21:07:35 1 person(s) at center/far
+21:07:38 1 person(s) at left/far
+21:07:38 1 person(s) at center/far
+21:07:40 nobody
+21:07:47 3 person(s) at center/far, right/far, center/far
+21:07:47 1 person(s) at center/far
+21:07:49 2 person(s) at center/far, right/far
+21:07:49 1 person(s) at center/far
+21:07:50 nobody
+21:07:51 1 person(s) at center/far
