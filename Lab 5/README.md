@@ -392,6 +392,14 @@ Two flavors, pick one or mix them:
 
 Two house rules. Sample rather than stream: one look every 5 to 30 seconds is plenty, and it keeps the Pi cool. And keep everything on the Pi: tell the people you live with, point the camera at things rather than at beds, and delete the snapshots after the demo.
 
+> ### Yesterday Together: Audio Diary
+>
+> Our project turns daytime photos and video clips into an audio diary that a person living with Alzheimer’s disease can review the following morning, independently or with a caregiver.
+>
+> We chose the “Process all night” approach. The camera collects material during the day. At bedtime, the user or caregiver hands those records over to the Raspberry Pi. The Pi processes them overnight and prepares a chronological recap for review and playback the next morning.
+>
+> The project explores how an interactive device can provide familiar cues for conversation and reflection. It is not intended to diagnose a condition, restore memory, or replace care.
+
 ## Part F. 
 ### Read Part 2 and storyboard your night-time interaction
 
@@ -406,6 +414,37 @@ Stuck? A kitchen that tells you who raided the fridge. A desk that reports wheth
 Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/250a-fall-2004/IDSketchbok.pdf).
 
 \*\*\***Insert ideas, sketches, Verplank diagrams and storyboards for your night-time interaction here.**\*\*\*
+
+> #### Design Goal
+>
+> Photos and videos can preserve everyday moments, but a collection of files still requires someone to select, organize, and explain them. Our goal is to turn selected records into an accessible recap with simple narration and corresponding photographs.
+>
+> Capture during the day → hand off at bedtime → process overnight → review together in the morning.
+>
+> #### Storyboard
+>
+> | Frame | Scenario and interaction | System response |
+> |---|---|---|
+> | 1. Bedtime handoff | The user and caregiver select records such as breakfast, an afternoon activity, and a visit. They remove unwanted material, add notes, and press “Prepare My Diary.” | The Pi confirms receipt and displays “Your diary will be prepared overnight.” |
+> | 2. Overnight processing | The user rests while the device processes the selected material. No further interaction is required. | The Pi selects useful frames, groups related records, and creates a draft narrative linked to source images. |
+> | 3. Morning reveal | The caregiver checks the draft. The user presses Play and can pause, replay, or skip a chapter. | The device plays the approved narration and displays the matching photograph. |
+>
+> ![Three-frame concept storyboard for Yesterday Together: bedtime handoff, overnight processing, and morning review followed by user-started playback.](storyboard-audio-diary-render.png)
+>
+> [HTML source / local preview](storyboard-audio-diary.html)
+>
+> **Initial ideation — Verplank**
+>
+> | Elements | Concept |
+> |---|---|
+> | Idea / Error | Turn selected daily records into a spoken recap with photographs. A collection of files still needs someone to select, organize, and explain it. |
+> | Metaphor / Scenario | A shared photo album read aloud: an older adult living with Alzheimer’s disease and a caregiver hand over selected moments at bedtime and revisit them the next morning. |
+> | Model / Task | Selected records → overnight draft → caregiver review → user-started playback. Choose, remove, and annotate records; prepare the diary; review; then listen at the user’s pace. |
+> | Display / Control | The screen confirms “Your diary will be prepared overnight,” shows “Processing,” then accompanies narration with the matching photograph. “Prepare My Diary,” Play/Pause, Replay Chapter, and Next Chapter provide the intended controls. |
+>
+> This first concept storyboard shows intended behavior, not a tested system. Review before playback and links from draft chapters to source records remain requirements to implement and verify. Night-time processing uses selected daytime material, with no camera in use. The people and generic Pi device are illustrative; the hardware and the mapping of playback controls to the single large button or screen remain undecided.
+>
+> The illustrations were generated with Imagegen; captions, layout, and this concept summary were prepared with AI assistance. [Prompts and asset notes](assets/storyboard-audio-diary/prompts.md).
 
 ## Prep for Part 2
 
@@ -424,6 +463,29 @@ The hand-off: the person tells the device what to watch tonight, and the device 
 
 \*\*\***Describe the interaction before.**\*\*\*
 
+> #### Daytime Input
+>
+> For the first prototype, we will use staged recordings made by consenting team members. We will capture three ordinary events, such as preparing breakfast, reading at a table, and receiving a visitor.
+>
+> Each photograph or video clip will have a timestamp. A caregiver can also provide short notes to clarify information that the camera cannot establish, such as a visitor’s name or the activity taking place.
+>
+> We will use selected records rather than assume that the camera captures a complete account of the person’s day.
+>
+> #### Handoff Interaction
+>
+> At bedtime, the user or caregiver will:
+>
+> 1. Select the day’s photographs and clips.
+> 2. Remove private or unwanted records.
+> 3. Add optional factual notes.
+> 4. Press “Prepare My Diary.”
+>
+> The device will show:
+>
+> “Today’s records have been received. Your diary will be prepared overnight.”
+>
+> This confirmation makes the handoff visible and gives the user a clear expectation for the morning. Once the task begins, the Pi should continue without requiring the user to supervise it.
+
 ## Part H. 
 ### Incorporate the observant system
 
@@ -438,6 +500,55 @@ Fake a night first: run it for thirty seconds while you walk around, stop it, an
 
 \*\*\***Screenshots or videos of the running system.**\*\*\*
 
+> #### Processing Pipeline
+>
+> The Raspberry Pi will process the selected records locally in the following sequence:
+>
+> 1. **Load and order the records.** Read timestamps and arrange the material chronologically.
+> 2. **Extract and select frames.** Sample frames from video clips, remove near-duplicates, and filter out images that are too blurry or dark to use reliably.
+> 3. **Identify visual clues.** Use YOLO to detect supported objects and people. These detections provide clues for organizing the material; they do not establish a person’s identity or explain an entire activity.
+> 4. **Build candidate events.** Group nearby records into possible events using timestamps and visual similarity. Attach the relevant images and caregiver notes to each event.
+> 5. **Generate a draft narrative.** Use a local vision-capable model to describe selected images, then use Qwen to organize supported descriptions and notes into short chronological chapters. If only a text-based Qwen model is available, its inputs will be structured detections and verified notes rather than raw images.
+> 6. **Prepare the morning review.** Save the draft alongside its source images. After the caregiver approves or edits the text, generate the final narration and make it available for playback.
+>
+> The overnight task prepares the diary; unreviewed AI-generated narration will not automatically play to the user.
+>
+> #### Keeping the Diary Grounded
+>
+> Every narrated event must be traceable to a photograph, video segment, or caregiver note. The system should leave gaps rather than invent details to make the story sound complete.
+>
+> These rules are especially important because the diary is intended to help someone revisit events they may not independently remember.
+>
+> #### Evidence Rules
+>
+> | Available evidence | Appropriate description | Unsupported claim to avoid |
+> |---|---|---|
+> | A person sitting at a table with a cup | “This photograph shows you at the table with a cup.” | “You enjoyed your morning coffee.” |
+> | A visitor appears in a photograph | “There is a visitor in this photograph.” | “Your daughter came to visit.” |
+> | A caregiver confirms the visitor’s identity | Use the confirmed name and relationship. | Invent a conversation that was not recorded. |
+> | A pill organizer is visible | Omit medication claims from the recap. | “You took your medication.” |
+>
+> #### Processing Status and Failure Handling
+>
+> The device will show a simple status such as **Processing**, **Ready for Review**, or **Needs Attention**.
+>
+> Intermediate results will be saved so that an interruption does not require restarting the entire task. If there is insufficient usable material, the device will explain that it could not prepare a reliable recap. It should not fill missing periods with generated events or present an older diary as yesterday’s.
+>
+> #### Overnight Test
+>
+> We will first run a short simulation with the three staged events to check the complete workflow. We will then start a real overnight processing run and inspect the results the following morning.
+>
+> We will record:
+>
+> * The number of input files and total video duration.
+> * Processing start and finish times.
+> * The number of candidate events produced.
+> * Errors, omissions, or unsupported statements in the draft.
+> * Changes required during caregiver review.
+> * Final audio duration and playback behavior.
+>
+> [Insert actual overnight logs, screenshots, and results here.]
+
 ## Part I. 
 ### Design the interaction after
 
@@ -448,6 +559,61 @@ The reveal. The night produced a log; the morning turns it into something a half
 ```
 
 Make it yours: show the report on the Mini PiTFT, read it aloud with Piper from Lab 3, plot the night as a timeline, or ask for JSON (`--json`, Part D) and move a servo. Whatever you pick, make sure it is honest about a night in which nothing happened.
+
+> #### Review Before Playback
+>
+> The caregiver will see each proposed chapter beside its source photograph and can approve, edit, or delete it. Only approved chapters will become part of the published diary.
+>
+> This review step also allows the caregiver to remove material that is accurate but unsuitable or unwanted.
+>
+> #### Listening Experience
+>
+> The morning interface will show the diary’s date, a representative photograph, and a large **Play Yesterday’s Diary** button.
+>
+> The recording can be played continuously, but it will be divided into short chapters so that the user does not have to listen to a long recording from beginning to end.
+>
+> The main controls will be **Play / Pause**, **Replay Chapter**, and **Next Chapter**.
+>
+> During playback, the display will show the photograph associated with the current chapter. Playback will begin when the user chooses it rather than starting automatically.
+>
+> #### Example Narration
+>
+> The following is an illustrative script for staged events, assuming the activities and visitor identity have been confirmed by a caregiver.
+>
+> > Good morning. Here are a few moments recorded yesterday. You can listen at your own pace.
+> >
+> > In the morning, you had breakfast at the kitchen table. This photograph shows the cup and plate on the table.
+> >
+> > In the afternoon, you spent some time reading by the window.
+> >
+> > Later, your daughter Anna visited. Here is a photograph of the two of you sitting together.
+> >
+> > That is the end of yesterday’s diary. You can replay a moment or finish whenever you like.
+>
+> The narration will use short, direct sentences. It will offer familiar material without asking the user to prove that they remember it.
+>
+> #### Prototype Evaluation
+>
+> Our first evaluation will use team members acting out the scenarios. It will assess the prototype’s operation and the accuracy of its output, rather than make claims about clinical benefit.
+>
+> | Evaluation area | Question |
+> |---|---|
+> | Event accuracy | Does each chapter match its source records and confirmed notes? |
+> | Chronology | Are events presented in the correct order? |
+> | Unsupported details | Does the draft invent identities, emotions, actions, or conversations? |
+> | Review workflow | Can a reviewer easily correct or remove a chapter? |
+> | Playback | Can a user pause, replay, and skip without assistance? |
+> | Overnight operation | Does the task complete, preserve progress, and report failures clearly? |
+>
+> [Insert demonstration video here.]
+>
+> [Insert observations, limitations, and changes made after testing here.]
+>
+> #### Privacy and User Control
+>
+> Recording will be limited to agreed situations and consenting participants. The user or caregiver will be able to exclude records before processing and remove chapters before playback. The prototype will keep its processing local and provide a way to delete the source material and generated diary.
+>
+> Our intended outcome is a small, controllable daily ritual: handing over selected moments at night and receiving an understandable, evidence-based audio diary the next morning.
 
 ## Final documentation
 
