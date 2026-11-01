@@ -1,0 +1,29 @@
+1. filtering
+  ok  20261027-081000.jpg  kept 1/1 frames  brightness 116.7  sharpness   857.0  dropped: -
+  ok  20261027-081100.jpg  kept 0/1 frames  brightness 117.2  sharpness   713.2  dropped: near-duplicate of 20261027-081000.jpg
+  ok  20261027-093000.jpg  kept 1/1 frames  brightness 120.4  sharpness   695.3  dropped: -
+  ok  20261027-110000.jpg  kept 1/1 frames  brightness 102.9  sharpness   689.5  dropped: -
+  ok  20261027-142000.jpg  kept 1/1 frames  brightness 110.9  sharpness  1053.9  dropped: -
+  ok  20261027-144500.jpg  kept 1/1 frames  brightness 111.8  sharpness  1067.2  dropped: -
+  ok  20261027-153000.jpg  kept 0/1 frames  brightness  21.6  sharpness   230.5  dropped: too dark
+  ok  20261027-161000.jpg  kept 1/1 frames  brightness 101.2  sharpness   531.9  dropped: -
+  ok  20261027-163000.jpg  kept 1/1 frames  brightness 100.5  sharpness   848.9  dropped: -
+  ok  20261027-183000.jpg  kept 1/1 frames  brightness  98.1  sharpness   760.3  dropped: -
+
+2. grouping: 6 events, key has 6; pairwise agreement 28/28
+  e1 08:10-08:10  20261027-081000.jpg (breakfast)
+  e2 09:30-09:30  20261027-093000.jpg (organizer)
+  e3 11:00-11:00  20261027-110000.jpg (food_preparation)  SENSITIVE ['knife']
+  e4 14:20-14:45  20261027-142000.jpg (reading), 20261027-144500.jpg (reading)
+  e5 16:10-16:30  20261027-161000.jpg (visit), 20261027-163000.jpg (visit)
+  e6 18:30-18:30  20261027-183000.jpg (dinner)
+
+3. draft: 5 chapters, 1 flagged, 1 events to check first
+  CHECK FIRST [11:00-11:00] ['knife']
+  [08:10-08:10] Breakfast: You sat at a wooden table in the dining room. You had a plate of scrambled eggs, tomatoes, and toast, alongside a ceramic mug.
+  [11:00-11:00] Kitchen Preparation: You prepared vegetables together in the kitchen. You cut carrots on a wooden board.  FLAGS ['seen in photos: knife']
+  [14:20-14:45] Reading Time: You sat in an armchair by the window and read an open book. A mug rested on a small wooden table next to you.
+  [16:10-16:30] Visit with Anna: Your daughter Anna visited you. You sat on the sofa together and looked through a photo album.
+  [18:30-18:30] Dinner: You sat at a wooden table in the dining room with a plate of food and a mug.
+
+The claims in each chapter still need a human read against the photos; this script only checks structure.

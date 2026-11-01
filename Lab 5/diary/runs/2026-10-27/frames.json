@@ -1,0 +1,92 @@
+[
+  {
+    "frame": "20261027-081000.jpg",
+    "source": "20261027-081000.jpg",
+    "t": "2026-10-27T08:10:00",
+    "brightness": 116.7,
+    "sharpness": 857.0,
+    "hash": "362624a452521097",
+    "drop": null
+  },
+  {
+    "frame": "20261027-081100.jpg",
+    "source": "20261027-081100.jpg",
+    "t": "2026-10-27T08:11:00",
+    "brightness": 117.2,
+    "sharpness": 713.2,
+    "hash": "362624a452531197",
+    "drop": "near-duplicate of 20261027-081000.jpg"
+  },
+  {
+    "frame": "20261027-093000.jpg",
+    "source": "20261027-093000.jpg",
+    "t": "2026-10-27T09:30:00",
+    "brightness": 120.4,
+    "sharpness": 695.3,
+    "hash": "3626048c54c44561",
+    "drop": null
+  },
+  {
+    "frame": "20261027-110000.jpg",
+    "source": "20261027-110000.jpg",
+    "t": "2026-10-27T11:00:00",
+    "brightness": 102.9,
+    "sharpness": 689.5,
+    "hash": "250d2d2d29ee25a4",
+    "drop": null
+  },
+  {
+    "frame": "20261027-142000.jpg",
+    "source": "20261027-142000.jpg",
+    "t": "2026-10-27T14:20:00",
+    "brightness": 110.9,
+    "sharpness": 1053.9,
+    "hash": "1292968a18234969",
+    "drop": null
+  },
+  {
+    "frame": "20261027-144500.jpg",
+    "source": "20261027-144500.jpg",
+    "t": "2026-10-27T14:45:00",
+    "brightness": 111.8,
+    "sharpness": 1067.2,
+    "hash": "1626a69298334d81",
+    "drop": null
+  },
+  {
+    "frame": "20261027-153000.jpg",
+    "source": "20261027-153000.jpg",
+    "t": "2026-10-27T15:30:00",
+    "brightness": 21.6,
+    "sharpness": 230.5,
+    "hash": "160e0e8e1c1e0286",
+    "drop": "too dark"
+  },
+  {
+    "frame": "20261027-161000.jpg",
+    "source": "20261027-161000.jpg",
+    "t": "2026-10-27T16:10:00",
+    "brightness": 101.2,
+    "sharpness": 531.9,
+    "hash": "662a6b6a6b495969",
+    "drop": null
+  },
+  {
+    "frame": "20261027-163000.jpg",
+    "source": "20261027-163000.jpg",
+    "t": "2026-10-27T16:30:00",
+    "brightness": 100.5,
+    "sharpness": 848.9,
+    "hash": "264a4a2a2d6c450f",
+    "drop": null
+  },
+  {
+    "frame": "20261027-183000.jpg",
+    "source": "20261027-183000.jpg",
+    "t": "2026-10-27T18:30:00",
+    "brightness": 98.1,
+    "sharpness": 760.3,
+    "hash": "2626a5e75253598b",
+    "drop": null
+  }
+]

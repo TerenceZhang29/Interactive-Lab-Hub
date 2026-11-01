@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-27",
+  "usage": "Evaluation only; do not provide this file to the pipeline.",
+  "images": [
+    {
+      "file": "20261027-081000.jpg",
+      "local_datetime": "2026-10-27T08:10:00",
+      "scene": "Breakfast at the table with a mug and plate.",
+      "event_id": "breakfast",
+      "test_purpose": "Keep; group with 08:11 as one breakfast.",
+      "dimensions": [
+        1280,
+        960
+      ]
+    },
+    {
+      "file": "20261027-081100.jpg",
+      "local_datetime": "2026-10-27T08:11:00",
+      "scene": "Nearly identical breakfast image.",
+      "event_id": "breakfast",
+      "test_purpose": "Near-duplicate of 08:10; deduplicate.",
+      "dimensions": [
+        1280,
+        960
+      ]
+    },
+    {
+      "file": "20261027-093000.jpg",
+      "local_datetime": "2026-10-27T09:30:00",
+      "scene": "A closed seven-compartment organizer on the table; no person visible.",
+      "event_id": "organizer",
+      "test_purpose": "Do not infer medication was taken.",
+      "dimensions": [
+        1280,
+        960
+      ]
+    },
+    {
+      "file": "20261027-110000.jpg",
+      "local_datetime": "2026-10-27T11:00:00",
+      "scene": "Older woman and caregiver prepare vegetables at the table.",
+      "event_id": "food_preparation",
+      "test_purpose": "Keep; recognize shared activity.",
+      "dimensions": [
+        1280,
+        960
+      ]
+    },
+    {
+      "file": "20261027-142000.jpg",
+      "local_datetime": "2026-10-27T14:20:00",
+      "scene": "Older woman reads in a window-side armchair.",
+      "event_id": "reading",
+      "test_purpose": "Keep; group with 14:45 reading.",
+      "dimensions": [
+        1280,
+        960
+      ]
+    },
+    {
+      "file": "20261027-144500.jpg",
+      "local_datetime": "2026-10-27T14:45:00",
+      "scene": "Older woman reads in a window-side armchair from another angle.",
+      "event_id": "reading",
+      "test_purpose": "Same activity as 14:20; group, not exact duplicate.",
+      "dimensions": [
+        1280,
+        960
+      ]
+    },
+    {
+      "file": "20261027-153000.jpg",
+      "local_datetime": "2026-10-27T15:30:00",
+      "scene": "Underexposed view of dining table and room.",
+      "event_id": "quality_filter",
+      "test_purpose": "Filter as deliberately underexposed.",
+      "dimensions": [
+        1280,
+        960
+      ]
+    },
+    {
+      "file": "20261027-161000.jpg",
+      "local_datetime": "2026-10-27T16:10:00",
+      "scene": "Older woman greets a visitor at the doorway.",
+      "event_id": "visit",
+      "test_purpose": "Keep; visitor identity comes from caregiver notes.",
+      "dimensions": [
+        1280,
+        801
+      ]
+    },
+    {
+      "file": "20261027-163000.jpg",
+      "local_datetime": "2026-10-27T16:30:00",
+      "scene": "Older woman and visitor look at a photo album on the sofa.",
+      "event_id": "visit",
+      "test_purpose": "Keep; group with the visit, preserve album activity.",
+      "dimensions": [
+        1280,
+        960
+      ]
+    },
+    {
+      "file": "20261027-183000.jpg",
+      "local_datetime": "2026-10-27T18:30:00",
+      "scene": "Older woman sits at table with dinner and mug.",
+      "event_id": "dinner",
+      "test_purpose": "Keep; distinguish from breakfast despite similar composition.",
+      "dimensions": [
+        1280,
+        960
+      ]
+    }
+  ]
+}

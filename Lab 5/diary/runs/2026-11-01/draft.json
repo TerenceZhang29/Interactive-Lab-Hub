@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-01",
+  "model": "google/gemini-3.5-flash-lite",
+  "check_first": [
+    {
+      "event": "e1",
+      "time": "08:30-08:30",
+      "seen": [
+        "knife"
+      ],
+      "sources": [
+        "20261101-083000.jpg"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "event": "e1",
+      "time": "08:30-08:30",
+      "title": "Morning Pumpkin Carving",
+      "text": "You sat indoors at a large wooden table near a window with a view of trees and buildings. You held a small yellow pumpkin.",
+      "sources": [
+        "20261101-083000.jpg"
+      ],
+      "caregiver_facts": [],
+      "flags": [
+        "seen in photos: knife"
+      ],
+      "review": "pending"
+    },
+    {
+      "event": "e3",
+      "time": "10:20-10:20",
+      "title": "Folding a Jacket",
+      "text": "You and the caregiver folded a jacket together.",
+      "sources": [
+        "20261101-102000.jpg",
+        "20261101-102001.jpg",
+        "20261101-102002.mp4@0s",
+        "20261101-102002.mp4@10s",
+        "20261101-102002.mp4@15s"
+      ],
+      "caregiver_facts": [
+        "The caregiver and he folded a jacket together."
+      ],
+      "flags": [],
+      "review": "pending"
+    },
+    {
+      "event": "e4",
+      "time": "13:40-13:41",
+      "title": "Drawing on the Couch",
+      "text": "You sat on a blue couch in an indoor room with large windows, bookshelves, and a green rug. You drew on a magnetic drawing board.",
+      "sources": [
+        "20261101-134000.mp4@0s",
+        "20261101-134030.mp4@0s",
+        "20261101-134030.mp4@5s",
+        "20261101-134030.mp4@10s",
+        "20261101-134030.mp4@30s"
+      ],
+      "caregiver_facts": [],
+      "flags": [],
+      "review": "pending"
+    },
+    {
+      "event": "e5",
+      "time": "14:20-14:20",
+      "title": "Reading by the Window",
+      "text": "You sat in a white patterned chair near a window and a bookshelf. You held and read an open book.",
+      "sources": [
+        "20261101-142000.mp4@0s",
+        "20261101-142000.mp4@5s",
+        "20261101-142000.mp4@15s"
+      ],
+      "caregiver_facts": [],
+      "flags": [],
+      "review": "pending"
+    },
+    {
+      "event": "e6",
+      "time": "15:00-15:00",
+      "title": "Moving Through the Lobby",
+      "text": "You walked near a staircase in a modern lobby. You also stood near a table with a laptop and a tumbler with a straw, looking out at large windows with a view of trees and buildings.",
+      "sources": [
+        "20261101-150000.mp4@0s",
+        "20261101-150000.mp4@5s",
+        "20261101-150000.mp4@10s",
+        "20261101-150000.mp4@15s",
+        "20261101-150000.mp4@20s",
+        "20261101-150000.mp4@25s",
+        "20261101-150000.mp4@30s",
+        "20261101-150000.mp4@35s",
+        "20261101-150000.mp4@40s",
+        "20261101-150000.mp4@45s",
+        "20261101-150000.mp4@50s",
+        "20261101-150000.mp4@55s"
+      ],
+      "caregiver_facts": [],
+      "flags": [],
+      "review": "pending"
+    },
+    {
+      "event": "e7",
+      "time": "16:10-16:10",
+      "title": "By the Glass Door",
+      "text": "You stood indoors near large glass windows and doors overlooking a city and water view. You stood near a doorway while holding a red bag.",
+      "sources": [
+        "20261101-161000.mp4@0s",
+        "20261101-161000.mp4@5s",
+        "20261101-161000.mp4@10s",
+        "20261101-161000.mp4@15s"
+      ],
+      "caregiver_facts": [],
+      "flags": [],
+      "review": "pending"
+    },
+    {
+      "event": "e8",
+      "time": "17:00-17:00",
+      "title": "Playing with Leo",
+      "text": "Your visitor was your grandson Leo; you played with a toy farm together.",
+      "sources": [
+        "20261101-170000.mp4@0s",
+        "20261101-170000.mp4@5s",
+        "20261101-170000.mp4@10s"
+      ],
+      "caregiver_facts": [
+        "The visitor was his grandson Leo; they played with a toy farm together."
+      ],
+      "flags": [],
+      "review": "pending"
+    }
+  ]
+}

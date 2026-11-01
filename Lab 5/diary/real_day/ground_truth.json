@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-01",
+  "usage": "Evaluation only; do not provide this file to the pipeline.",
+  "about": "Staged by friends on 2026-11-01 between 16:08 and 16:24 in a public lounge, not a home. Clock times in the file names are assumed from the shot plan, not real capture times. A young actor plays the older adult (A). The two 1931/1930 images are darkened and motion-blurred copies of 20261101-102000.jpg, made for the filter test.",
+  "images": [
+    {"file": "20261101-083000.jpg", "source": "WhatsApp Image 2026-11-01 at 16.08.47.jpeg", "event_id": "pumpkin", "scene": "A, alone at a long table, works on a small yellow pumpkin with two teal-handled carving tools; tumbler and a toy basket on the table.", "test_purpose": "Keep. Replaces the breakfast scene; nobody eats."},
+    {"file": "20261101-083001.jpg", "source": "WhatsApp Image 2026-11-01 at 16.08.48.jpeg", "event_id": "pumpkin", "scene": "Same as 083000, hands slightly moved.", "test_purpose": "Near-duplicate of 083000; deduplicate."},
+    {"file": "20261101-091500.jpg", "source": "IMG_1704.HEIC", "event_id": "supplement", "scene": "Portrait shot of an open vitamin D3 bottle with soft gels spilled on a wooden table; no person; label readable.", "test_purpose": "Do not claim anything was taken. Replaces the pill organizer."},
+    {"file": "20261101-091506.jpg", "source": "IMG_1705.HEIC", "event_id": "supplement", "scene": "Same bottle, closer, landscape.", "test_purpose": "Same event; may or may not be dropped as a near-duplicate (different framing)."},
+    {"file": "20261101-091511.jpg", "source": "IMG_1706.HEIC", "event_id": "supplement", "scene": "Same as 091506, slightly wider.", "test_purpose": "Near-duplicate of 091506; deduplicate."},
+    {"file": "20261101-102000.jpg", "source": "IMG_1707.HEIC", "event_id": "folding", "scene": "Two people at a table fold a dark jacket together by a window.", "test_purpose": "Keep; caregiver identity comes from the note."},
+    {"file": "20261101-102001.jpg", "source": "IMG_1708.HEIC", "event_id": "folding", "scene": "Burst shot one second after 102000.", "test_purpose": "Near-duplicate of 102000; deduplicate."},
+    {"file": "20261101-102002.mp4", "source": "IMG_1709.MOV (15.8 s)", "event_id": "folding", "scene": "The same two people fold the jacket into a roll; at the end A looks into the camera.", "test_purpose": "Video and photos of one activity group into one event."},
+    {"file": "20261101-134000.mp4", "source": "IMG_1710.MOV (14.1 s)", "event_id": "drawing", "scene": "A sits on a blue sofa drawing on a children's magnetic drawing board; a person's body is at the right edge.", "test_purpose": "Replaces sitting and reading; near-static frames deduplicate."},
+    {"file": "20261101-134030.mp4", "source": "IMG_1711.MOV (33.7 s)", "event_id": "drawing", "scene": "Second take of the same drawing scene; A leans back at the start, then draws.", "test_purpose": "Same event as 134000."},
+    {"file": "20261101-142000.mp4", "source": "IMG_1712.MOV (16.8 s)", "event_id": "reading", "scene": "A reads a paperback in a white chair next to a bookshelf.", "test_purpose": "Keep; do not invent the book title from the shelf."},
+    {"file": "20261101-150000.mp4", "source": "IMG_1716.MOV (59.8 s)", "event_id": "walk", "scene": "0-42 s: A walks alone around an indoor lounge, holding a small blade (likely the pumpkin carving tool) for the first ~18 s; bystanders at 36-39 s. 42-60 s: A sits at a table holding a tumbler.", "test_purpose": "Long clip; sensitive object must reach the caregiver, not the narration; within-clip change from walking to sitting."},
+    {"file": "20261101-161000.mp4", "source": "IMG_1714.MOV (17.6 s)", "event_id": "door", "scene": "A opens a glass exit door; a person outside hands over a red shopping bag and leaves.", "test_purpose": "No name or relationship for the stranger; bag contents unknown."},
+    {"file": "20261101-170000.mp4", "source": "IMG_1715.MOV (10.8 s)", "event_id": "visit", "scene": "A and a visitor in a cap play with a toy farm on a round table; the visitor leaves the frame at the end.", "test_purpose": "Name comes only from the caregiver note."},
+    {"file": "20261101-193000.jpg", "source": "derived from IMG_1707.HEIC (-4.5 EV)", "event_id": "quality_filter", "scene": "Darkened copy.", "test_purpose": "Filter as too dark."},
+    {"file": "20261101-193100.jpg", "source": "derived from IMG_1707.HEIC (motion blur)", "event_id": "quality_filter", "scene": "Motion-blurred copy.", "test_purpose": "Filter as too blurry."}
+  ]
+}

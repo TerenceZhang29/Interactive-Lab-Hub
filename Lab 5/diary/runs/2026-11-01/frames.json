@@ -1,0 +1,416 @@
+[
+  {
+    "frame": "20261101-083000.jpg",
+    "source": "20261101-083000.jpg",
+    "t": "2026-11-01T08:30:00",
+    "brightness": 135.2,
+    "sharpness": 2284.1,
+    "hash": "acacad8c8389c007",
+    "drop": null
+  },
+  {
+    "frame": "20261101-083001.jpg",
+    "source": "20261101-083001.jpg",
+    "t": "2026-11-01T08:30:01",
+    "brightness": 134.1,
+    "sharpness": 2171.3,
+    "hash": "acacadac838cc005",
+    "drop": "near-duplicate of 20261101-083000.jpg"
+  },
+  {
+    "frame": "20261101-091500.jpg",
+    "source": "20261101-091500.jpg",
+    "t": "2026-11-01T09:15:00",
+    "brightness": 126.1,
+    "sharpness": 257.5,
+    "hash": "064e4ec6c7470329",
+    "drop": null
+  },
+  {
+    "frame": "20261101-091506.jpg",
+    "source": "20261101-091506.jpg",
+    "t": "2026-11-01T09:15:06",
+    "brightness": 125.9,
+    "sharpness": 385.0,
+    "hash": "0c0c0ccc8c8e0703",
+    "drop": null
+  },
+  {
+    "frame": "20261101-091511.jpg",
+    "source": "20261101-091511.jpg",
+    "t": "2026-11-01T09:15:11",
+    "brightness": 127.2,
+    "sharpness": 361.1,
+    "hash": "080c4cccccce0703",
+    "drop": "near-duplicate of 20261101-091506.jpg"
+  },
+  {
+    "frame": "20261101-102000.jpg",
+    "source": "20261101-102000.jpg",
+    "t": "2026-11-01T10:20:00",
+    "brightness": 128.0,
+    "sharpness": 2478.1,
+    "hash": "a223079293938e8b",
+    "drop": null
+  },
+  {
+    "frame": "20261101-102001.jpg",
+    "source": "20261101-102001.jpg",
+    "t": "2026-11-01T10:20:01",
+    "brightness": 128.8,
+    "sharpness": 2789.8,
+    "hash": "32320a1696920e5f",
+    "drop": null
+  },
+  {
+    "frame": "20261101-102002_0000s.jpg",
+    "source": "20261101-102002.mp4@0s",
+    "t": "2026-11-01T10:20:02",
+    "brightness": 121.2,
+    "sharpness": 867.1,
+    "hash": "32139712929a0e9b",
+    "drop": null
+  },
+  {
+    "frame": "20261101-102002_0005s.jpg",
+    "source": "20261101-102002.mp4@5s",
+    "t": "2026-11-01T10:20:07",
+    "brightness": 124.2,
+    "sharpness": 676.4,
+    "hash": "32128a1696920e8f",
+    "drop": "near-duplicate of 20261101-102001.jpg"
+  },
+  {
+    "frame": "20261101-102002_0010s.jpg",
+    "source": "20261101-102002.mp4@10s",
+    "t": "2026-11-01T10:20:12",
+    "brightness": 124.9,
+    "sharpness": 742.5,
+    "hash": "325a8e36b6b626d6",
+    "drop": null
+  },
+  {
+    "frame": "20261101-102002_0015s.jpg",
+    "source": "20261101-102002.mp4@15s",
+    "t": "2026-11-01T10:20:17",
+    "brightness": 124.0,
+    "sharpness": 785.2,
+    "hash": "5256463617361616",
+    "drop": null
+  },
+  {
+    "frame": "20261101-134000_0000s.jpg",
+    "source": "20261101-134000.mp4@0s",
+    "t": "2026-11-01T13:40:00",
+    "brightness": 115.2,
+    "sharpness": 645.5,
+    "hash": "757575f3658f9f36",
+    "drop": null
+  },
+  {
+    "frame": "20261101-134000_0005s.jpg",
+    "source": "20261101-134000.mp4@5s",
+    "t": "2026-11-01T13:40:05",
+    "brightness": 114.5,
+    "sharpness": 594.4,
+    "hash": "757577f3658f9f36",
+    "drop": "near-duplicate of 20261101-134000_0000s.jpg"
+  },
+  {
+    "frame": "20261101-134000_0010s.jpg",
+    "source": "20261101-134000.mp4@10s",
+    "t": "2026-11-01T13:40:10",
+    "brightness": 114.7,
+    "sharpness": 616.8,
+    "hash": "757575e7658f9f36",
+    "drop": "near-duplicate of 20261101-134000_0000s.jpg"
+  },
+  {
+    "frame": "20261101-134030_0000s.jpg",
+    "source": "20261101-134030.mp4@0s",
+    "t": "2026-11-01T13:40:30",
+    "brightness": 115.7,
+    "sharpness": 801.6,
+    "hash": "757573f3ef0f9f7c",
+    "drop": null
+  },
+  {
+    "frame": "20261101-134030_0005s.jpg",
+    "source": "20261101-134030.mp4@5s",
+    "t": "2026-11-01T13:40:35",
+    "brightness": 117.8,
+    "sharpness": 590.7,
+    "hash": "75716be76f0f9736",
+    "drop": null
+  },
+  {
+    "frame": "20261101-134030_0010s.jpg",
+    "source": "20261101-134030.mp4@10s",
+    "t": "2026-11-01T13:40:40",
+    "brightness": 120.1,
+    "sharpness": 642.3,
+    "hash": "747167e72d8f97b6",
+    "drop": null
+  },
+  {
+    "frame": "20261101-134030_0015s.jpg",
+    "source": "20261101-134030.mp4@15s",
+    "t": "2026-11-01T13:40:45",
+    "brightness": 118.3,
+    "sharpness": 578.7,
+    "hash": "757167e76f8f9736",
+    "drop": "near-duplicate of 20261101-134030_0010s.jpg"
+  },
+  {
+    "frame": "20261101-134030_0020s.jpg",
+    "source": "20261101-134030.mp4@20s",
+    "t": "2026-11-01T13:40:50",
+    "brightness": 116.9,
+    "sharpness": 635.1,
+    "hash": "747167e76d8f9736",
+    "drop": "near-duplicate of 20261101-134030_0010s.jpg"
+  },
+  {
+    "frame": "20261101-134030_0025s.jpg",
+    "source": "20261101-134030.mp4@25s",
+    "t": "2026-11-01T13:40:55",
+    "brightness": 115.0,
+    "sharpness": 658.3,
+    "hash": "747177e76d8f9734",
+    "drop": "near-duplicate of 20261101-134030_0010s.jpg"
+  },
+  {
+    "frame": "20261101-134030_0030s.jpg",
+    "source": "20261101-134030.mp4@30s",
+    "t": "2026-11-01T13:41:00",
+    "brightness": 115.1,
+    "sharpness": 661.2,
+    "hash": "747977f7658f8736",
+    "drop": null
+  },
+  {
+    "frame": "20261101-142000_0000s.jpg",
+    "source": "20261101-142000.mp4@0s",
+    "t": "2026-11-01T14:20:00",
+    "brightness": 125.9,
+    "sharpness": 1130.4,
+    "hash": "c2c2d6dede8f6d38",
+    "drop": null
+  },
+  {
+    "frame": "20261101-142000_0005s.jpg",
+    "source": "20261101-142000.mp4@5s",
+    "t": "2026-11-01T14:20:05",
+    "brightness": 128.5,
+    "sharpness": 1170.0,
+    "hash": "c6c6d4dcddaf6934",
+    "drop": null
+  },
+  {
+    "frame": "20261101-142000_0010s.jpg",
+    "source": "20261101-142000.mp4@10s",
+    "t": "2026-11-01T14:20:10",
+    "brightness": 128.0,
+    "sharpness": 1198.3,
+    "hash": "c6c6d4dcddbf697e",
+    "drop": "near-duplicate of 20261101-142000_0005s.jpg"
+  },
+  {
+    "frame": "20261101-142000_0015s.jpg",
+    "source": "20261101-142000.mp4@15s",
+    "t": "2026-11-01T14:20:15",
+    "brightness": 129.9,
+    "sharpness": 1290.1,
+    "hash": "c6c4d4dd9dbd6d7e",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0000s.jpg",
+    "source": "20261101-150000.mp4@0s",
+    "t": "2026-11-01T15:00:00",
+    "brightness": 147.2,
+    "sharpness": 1904.3,
+    "hash": "78712d27263d3373",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0005s.jpg",
+    "source": "20261101-150000.mp4@5s",
+    "t": "2026-11-01T15:00:05",
+    "brightness": 143.8,
+    "sharpness": 1192.5,
+    "hash": "b6b7727252c365c2",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0010s.jpg",
+    "source": "20261101-150000.mp4@10s",
+    "t": "2026-11-01T15:00:10",
+    "brightness": 125.1,
+    "sharpness": 1589.1,
+    "hash": "00808989999b8fa5",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0015s.jpg",
+    "source": "20261101-150000.mp4@15s",
+    "t": "2026-11-01T15:00:15",
+    "brightness": 133.9,
+    "sharpness": 2544.3,
+    "hash": "a3a8b22aaaab6969",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0020s.jpg",
+    "source": "20261101-150000.mp4@20s",
+    "t": "2026-11-01T15:00:20",
+    "brightness": 132.4,
+    "sharpness": 1445.7,
+    "hash": "300c2c2c0c2e8d0f",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0025s.jpg",
+    "source": "20261101-150000.mp4@25s",
+    "t": "2026-11-01T15:00:25",
+    "brightness": 155.9,
+    "sharpness": 535.3,
+    "hash": "92b6b2b6d6531393",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0030s.jpg",
+    "source": "20261101-150000.mp4@30s",
+    "t": "2026-11-01T15:00:30",
+    "brightness": 162.3,
+    "sharpness": 1681.9,
+    "hash": "6c68484c594eeca3",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0035s.jpg",
+    "source": "20261101-150000.mp4@35s",
+    "t": "2026-11-01T15:00:35",
+    "brightness": 141.2,
+    "sharpness": 2087.8,
+    "hash": "1d1f255585852b6c",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0040s.jpg",
+    "source": "20261101-150000.mp4@40s",
+    "t": "2026-11-01T15:00:40",
+    "brightness": 131.6,
+    "sharpness": 1325.7,
+    "hash": "75ad6d2426666626",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0045s.jpg",
+    "source": "20261101-150000.mp4@45s",
+    "t": "2026-11-01T15:00:45",
+    "brightness": 125.1,
+    "sharpness": 2493.8,
+    "hash": "c909a925d5a5c4cf",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0050s.jpg",
+    "source": "20261101-150000.mp4@50s",
+    "t": "2026-11-01T15:00:50",
+    "brightness": 131.9,
+    "sharpness": 2575.2,
+    "hash": "3273eaef6e6facad",
+    "drop": null
+  },
+  {
+    "frame": "20261101-150000_0055s.jpg",
+    "source": "20261101-150000.mp4@55s",
+    "t": "2026-11-01T15:00:55",
+    "brightness": 133.2,
+    "sharpness": 2513.3,
+    "hash": "125342ee4a6eacbe",
+    "drop": null
+  },
+  {
+    "frame": "20261101-161000_0000s.jpg",
+    "source": "20261101-161000.mp4@0s",
+    "t": "2026-11-01T16:10:00",
+    "brightness": 104.5,
+    "sharpness": 1222.0,
+    "hash": "8cd597935353928b",
+    "drop": null
+  },
+  {
+    "frame": "20261101-161000_0005s.jpg",
+    "source": "20261101-161000.mp4@5s",
+    "t": "2026-11-01T16:10:05",
+    "brightness": 107.8,
+    "sharpness": 1161.3,
+    "hash": "8dd1958d4f4c8c8f",
+    "drop": null
+  },
+  {
+    "frame": "20261101-161000_0010s.jpg",
+    "source": "20261101-161000.mp4@10s",
+    "t": "2026-11-01T16:10:10",
+    "brightness": 102.6,
+    "sharpness": 701.1,
+    "hash": "25292b0b9b83871b",
+    "drop": null
+  },
+  {
+    "frame": "20261101-161000_0015s.jpg",
+    "source": "20261101-161000.mp4@15s",
+    "t": "2026-11-01T16:10:15",
+    "brightness": 104.0,
+    "sharpness": 756.5,
+    "hash": "292b2b2b2bb323a3",
+    "drop": null
+  },
+  {
+    "frame": "20261101-170000_0000s.jpg",
+    "source": "20261101-170000.mp4@0s",
+    "t": "2026-11-01T17:00:00",
+    "brightness": 111.8,
+    "sharpness": 1159.8,
+    "hash": "767666665a5a5b1b",
+    "drop": null
+  },
+  {
+    "frame": "20261101-170000_0005s.jpg",
+    "source": "20261101-170000.mp4@5s",
+    "t": "2026-11-01T17:00:05",
+    "brightness": 111.7,
+    "sharpness": 1020.0,
+    "hash": "222e2c920b5b0b0f",
+    "drop": null
+  },
+  {
+    "frame": "20261101-170000_0010s.jpg",
+    "source": "20261101-170000.mp4@10s",
+    "t": "2026-11-01T17:00:10",
+    "brightness": 121.0,
+    "sharpness": 1164.0,
+    "hash": "7bbbaa8a0e2e0c0c",
+    "drop": null
+  },
+  {
+    "frame": "20261101-193000.jpg",
+    "source": "20261101-193000.jpg",
+    "t": "2026-11-01T19:30:00",
+    "brightness": 25.9,
+    "sharpness": 176.8,
+    "hash": "a223071293938e8b",
+    "drop": "too dark"
+  },
+  {
+    "frame": "20261101-193100.jpg",
+    "source": "20261101-193100.jpg",
+    "t": "2026-11-01T19:31:00",
+    "brightness": 138.4,
+    "sharpness": 50.5,
+    "hash": "b333079393d38f8b",
+    "drop": null
+  }
+]

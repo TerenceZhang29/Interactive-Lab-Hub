@@ -1,0 +1,790 @@
+[
+  {
+    "id": "e1",
+    "start": "2026-11-01T08:30:00",
+    "end": "2026-11-01T08:30:00",
+    "frames": [
+      "20261101-083000.jpg"
+    ],
+    "sources": [
+      "20261101-083000.jpg"
+    ],
+    "observations": [
+      {
+        "people": 1,
+        "who": [
+          "a young person with dark hair and glasses"
+        ],
+        "setting": "indoors at a large wooden table near a window with a view of trees and buildings",
+        "objects": [
+          "wooden table",
+          "small yellow pumpkin",
+          "knife",
+          "tumbler with straw",
+          "red plastic basket",
+          "laptop",
+          "chairs"
+        ],
+        "activity": "carving a small pumpkin",
+        "description": "A young person with dark hair and glasses sits at a large wooden table indoors near a tall window, holding a knife and carving a small yellow pumpkin.",
+        "usable": true
+      }
+    ],
+    "notes": [],
+    "sensitive": [
+      "knife"
+    ]
+  },
+  {
+    "id": "e2",
+    "start": "2026-11-01T09:15:00",
+    "end": "2026-11-01T09:15:06",
+    "frames": [
+      "20261101-091500.jpg",
+      "20261101-091506.jpg"
+    ],
+    "sources": [
+      "20261101-091500.jpg",
+      "20261101-091506.jpg"
+    ],
+    "observations": [
+      {
+        "people": 0,
+        "who": [],
+        "setting": "indoors",
+        "objects": [
+          "bottle",
+          "vitamin D3 capsules",
+          "wooden surface"
+        ],
+        "activity": "",
+        "description": "An open bottle of Vitamin D3 sits on a wooden surface with several yellow gel capsules scattered in front of it.",
+        "usable": true
+      },
+      {
+        "people": 0,
+        "who": [],
+        "setting": "indoors",
+        "objects": [
+          "bottle",
+          "vitamin D3 capsules",
+          "wooden surface"
+        ],
+        "activity": "",
+        "description": "An open bottle labeled Vitamin D3 rests on a wooden surface with several yellow gel capsules scattered in front of it.",
+        "usable": true
+      }
+    ],
+    "notes": [],
+    "sensitive": []
+  },
+  {
+    "id": "e3",
+    "start": "2026-11-01T10:20:00",
+    "end": "2026-11-01T10:20:17",
+    "frames": [
+      "20261101-102000.jpg",
+      "20261101-102001.jpg",
+      "20261101-102002_0000s.jpg",
+      "20261101-102002_0010s.jpg",
+      "20261101-102002_0015s.jpg"
+    ],
+    "sources": [
+      "20261101-102000.jpg",
+      "20261101-102001.jpg",
+      "20261101-102002.mp4@0s",
+      "20261101-102002.mp4@10s",
+      "20261101-102002.mp4@15s"
+    ],
+    "observations": [
+      {
+        "people": 2,
+        "who": [
+          "a younger man",
+          "another younger man"
+        ],
+        "setting": "indoors near large windows with a view of a city and trees",
+        "objects": [
+          "table",
+          "black garments",
+          "windows",
+          "chair",
+          "pill"
+        ],
+        "activity": "handling garments on a table",
+        "description": "Two younger men stand at a wooden table, touching black garments. Large windows show an urban landscape and trees in the background.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "two younger men"
+        ],
+        "setting": "an indoor room with large windows showing a city skyline and trees outside",
+        "objects": [
+          "black clothing item",
+          "wooden table",
+          "smartphone",
+          "outlets"
+        ],
+        "activity": "handling a black piece of clothing on a table",
+        "description": "Two younger men stand beside a wooden table, looking down at and handling a black garment. Large windows in the background reveal a city skyline and trees outdoors.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "a younger man with dark hair",
+          "another younger man with dark hair"
+        ],
+        "setting": "An indoor space with large glass windows showing a city and trees outside, next to a wooden table.",
+        "objects": [
+          "wooden table",
+          "black garment",
+          "glass windows",
+          "column",
+          "chairs outside"
+        ],
+        "activity": "Two younger men handling a black garment on a table.",
+        "description": "Two younger men stand by a large window holding and examining a black garment placed on a wooden table.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "a younger man wearing a dark t-shirt",
+          "another younger man wearing a dark t-shirt and jeans"
+        ],
+        "setting": "indoors near large glass windows with a view of trees and buildings",
+        "objects": [
+          "table",
+          "dark jacket",
+          "chairs",
+          "windows",
+          "pillar"
+        ],
+        "activity": "standing at a table and folding a jacket",
+        "description": "Two younger men in dark t-shirts stand by a table, holding and folding a dark jacket. Large windows behind them show trees and buildings outside.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "a younger man wearing glasses and a dark t-shirt",
+          "another younger man wearing a dark t-shirt"
+        ],
+        "setting": "indoors near large glass windows with an outdoor view",
+        "objects": [
+          "table",
+          "glasses",
+          "dark t-shirts",
+          "jeans"
+        ],
+        "activity": "standing near a table",
+        "description": "Two younger men stand indoors near large windows, with one wearing glasses and a dark t-shirt while touching an object on a table.",
+        "usable": true
+      }
+    ],
+    "notes": [
+      "The caregiver and he folded a jacket together."
+    ],
+    "sensitive": []
+  },
+  {
+    "id": "e4",
+    "start": "2026-11-01T13:40:00",
+    "end": "2026-11-01T13:41:00",
+    "frames": [
+      "20261101-134000_0000s.jpg",
+      "20261101-134030_0000s.jpg",
+      "20261101-134030_0005s.jpg",
+      "20261101-134030_0010s.jpg",
+      "20261101-134030_0030s.jpg"
+    ],
+    "sources": [
+      "20261101-134000.mp4@0s",
+      "20261101-134030.mp4@0s",
+      "20261101-134030.mp4@5s",
+      "20261101-134030.mp4@10s",
+      "20261101-134030.mp4@30s"
+    ],
+    "observations": [
+      {
+        "people": 2,
+        "who": [
+          "a younger man",
+          "a partially visible person"
+        ],
+        "setting": "an indoor room with large windows, a green rug, bookshelves, and blue couches",
+        "objects": [
+          "tablet",
+          "pen",
+          "bookshelf",
+          "books",
+          "connect four game",
+          "toys",
+          "blue couches",
+          "chairs",
+          "table"
+        ],
+        "activity": "drawing on a tablet",
+        "description": "A younger man sits on a blue couch holding a drawing tablet and pen. In the background are bookshelves, a green rug, and large windows.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "an indoor room with large windows, a green rug, bookshelves, and blue seating",
+        "objects": [
+          "bookshelf",
+          "books",
+          "blue couch",
+          "white tables",
+          "drawing board",
+          "red pen",
+          "toys"
+        ],
+        "activity": "drawing on a magnetic board",
+        "description": "A younger man with dark hair wears a dark t-shirt and jeans while holding a drawing board and pen on a blue couch.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man with dark hair"
+        ],
+        "setting": "an indoor room with a blue sofa, large windows, green carpet, and bookshelves",
+        "objects": [
+          "blue sofa",
+          "drawing board",
+          "bookshelf",
+          "books",
+          "table",
+          "toys"
+        ],
+        "activity": "drawing or writing on a magnetic drawing board",
+        "description": "A younger man with dark hair is sitting on a blue sofa while holding a blue drawing board. A bookshelf and large windows are visible in the background.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "an indoor room with a blue sofa, large windows, and a bookcase",
+        "objects": [
+          "blue sofa",
+          "drawing board",
+          "stylus",
+          "bookcase",
+          "books",
+          "game",
+          "table",
+          "chairs",
+          "windows"
+        ],
+        "activity": "drawing on a magnetic drawing board",
+        "description": "A younger man is sitting on a blue sofa while drawing on a blue magnetic drawing board with a red stylus. A bookcase filled with books and a game are visible in the background.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man with dark hair"
+        ],
+        "setting": "indoors in a bright lounge area with large windows, a bookshelf, and a green carpet",
+        "objects": [
+          "blue sofa",
+          "drawing tablet",
+          "bookshelf",
+          "books",
+          "large four-in-a-row game",
+          "toy barn",
+          "chairs",
+          "round white table"
+        ],
+        "activity": "drawing on a magnetic writing board",
+        "description": "A younger man with dark hair is sitting on a blue sofa while drawing on a blue magnetic board. The room features large windows, a bookshelf, and a green carpet.",
+        "usable": true
+      }
+    ],
+    "notes": [],
+    "sensitive": []
+  },
+  {
+    "id": "e5",
+    "start": "2026-11-01T14:20:00",
+    "end": "2026-11-01T14:20:15",
+    "frames": [
+      "20261101-142000_0000s.jpg",
+      "20261101-142000_0005s.jpg",
+      "20261101-142000_0015s.jpg"
+    ],
+    "sources": [
+      "20261101-142000.mp4@0s",
+      "20261101-142000.mp4@5s",
+      "20261101-142000.mp4@15s"
+    ],
+    "observations": [
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "an indoor room with a concrete wall and a bookshelf",
+        "objects": [
+          "a white patterned chair",
+          "books",
+          "a book",
+          "glasses"
+        ],
+        "activity": "reading a book",
+        "description": "A younger man wearing glasses, a dark t-shirt, and light blue jeans sits in a white patterned chair while holding and reading an open book. A tall bookshelf filled with books stands to his left.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "indoor room near a window",
+        "objects": [
+          "bookshelf",
+          "books",
+          "white chair",
+          "book"
+        ],
+        "activity": "reading a book",
+        "description": "A younger man sits in a white chair near a window and holds an open book. A bookshelf filled with books stands to his left.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "indoor room with bookshelves and large glass doors",
+        "objects": [
+          "chair",
+          "book",
+          "bookshelf",
+          "rug",
+          "glasses"
+        ],
+        "activity": "reading a book",
+        "description": "A younger man wearing glasses sits in a white woven chair and reads a book. A bookshelf filled with books stands to his left, and large glass doors are visible to his right.",
+        "usable": true
+      }
+    ],
+    "notes": [],
+    "sensitive": []
+  },
+  {
+    "id": "e6",
+    "start": "2026-11-01T15:00:00",
+    "end": "2026-11-01T15:00:55",
+    "frames": [
+      "20261101-150000_0000s.jpg",
+      "20261101-150000_0005s.jpg",
+      "20261101-150000_0010s.jpg",
+      "20261101-150000_0015s.jpg",
+      "20261101-150000_0020s.jpg",
+      "20261101-150000_0025s.jpg",
+      "20261101-150000_0030s.jpg",
+      "20261101-150000_0035s.jpg",
+      "20261101-150000_0040s.jpg",
+      "20261101-150000_0045s.jpg",
+      "20261101-150000_0050s.jpg",
+      "20261101-150000_0055s.jpg"
+    ],
+    "sources": [
+      "20261101-150000.mp4@0s",
+      "20261101-150000.mp4@5s",
+      "20261101-150000.mp4@10s",
+      "20261101-150000.mp4@15s",
+      "20261101-150000.mp4@20s",
+      "20261101-150000.mp4@25s",
+      "20261101-150000.mp4@30s",
+      "20261101-150000.mp4@35s",
+      "20261101-150000.mp4@40s",
+      "20261101-150000.mp4@45s",
+      "20261101-150000.mp4@50s",
+      "20261101-150000.mp4@55s"
+    ],
+    "observations": [
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "an indoor lobby with a concrete wall and a staircase",
+        "objects": [
+          "staircase",
+          "railing",
+          "vending machines",
+          "door",
+          "walls"
+        ],
+        "activity": "walking near a staircase",
+        "description": "A younger man wearing a dark t-shirt and light blue jeans walks near a staircase in a modern lobby.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "indoor lobby or hallway",
+        "objects": [
+          "concrete pillar",
+          "stairs",
+          "vending machines",
+          "seating"
+        ],
+        "activity": "walking",
+        "description": "A younger man wearing a dark t-shirt and light jeans walks through a modern hallway with concrete pillars and a staircase.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "a large modern lobby with tall glass windows and wooden ceilings",
+        "objects": [
+          "long wooden table",
+          "benches",
+          "green patterned stools",
+          "chairs",
+          "pillars"
+        ],
+        "activity": "walking",
+        "description": "A younger man in a dark t-shirt and light jeans walks through a bright modern lobby.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "indoor space with large windows overlooking an outdoor terrace and city buildings",
+        "objects": [
+          "large windows",
+          "tables",
+          "chairs",
+          "wooden furniture",
+          "pillar"
+        ],
+        "activity": "standing near a window",
+        "description": "A younger man wearing a dark t-shirt and light-colored jeans stands indoors near large windows overlooking an outdoor terrace.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "an indoor space with large windows and tables",
+        "objects": [
+          "glasses",
+          "dark t-shirt",
+          "jeans",
+          "wooden counter",
+          "tables",
+          "chairs"
+        ],
+        "activity": "standing near a counter",
+        "description": "A younger man wearing glasses, a dark t-shirt, and jeans stands indoors near a wooden counter with large windows in the background.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "indoor lobby or hallway",
+        "objects": [
+          "pillar",
+          "bar stools",
+          "counter",
+          "exit sign",
+          "door"
+        ],
+        "activity": "standing",
+        "description": "A younger man wearing a dark t-shirt and light blue jeans stands next to a white pillar in a modern indoor space. In the background are a counter with bar stools and a closed door with an exit sign.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "indoor stairway with concrete walls and metal railing",
+        "objects": [
+          "stairs",
+          "metal railing",
+          "t-shirt",
+          "jeans",
+          "glasses"
+        ],
+        "activity": "standing near a staircase",
+        "description": "A younger man wearing a dark t-shirt and light blue jeans stands near a set of stairs with a metal railing.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "a younger man standing",
+          "a younger man sitting"
+        ],
+        "setting": "an indoor space with a staircase and concrete walls",
+        "objects": [
+          "staircase",
+          "bookshelf",
+          "blue couch",
+          "game board"
+        ],
+        "activity": "standing and sitting in a room",
+        "description": "A younger man in a dark shirt stands near a staircase, while another younger man in a dark jacket sits on a blue couch nearby.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "a younger man",
+          "another younger man"
+        ],
+        "setting": "indoor space with large windows overlooking a bridge and water",
+        "objects": [
+          "long wooden table",
+          "glass windows",
+          "concrete pillars",
+          "green stool"
+        ],
+        "activity": "standing",
+        "description": "A younger man with dark hair viewed from behind stands in a large room with floor-to-ceiling windows. Another person is visible near the doorway in the background.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a young man wearing glasses"
+        ],
+        "setting": "an indoor room with large windows showing a city skyline view",
+        "objects": [
+          "tumbler",
+          "table",
+          "laptop",
+          "basket",
+          "can",
+          "bag"
+        ],
+        "activity": "holding a tumbler while standing near a table",
+        "description": "A young man wearing glasses and a dark t-shirt stands indoors beside a long table, holding a tall tumbler with a straw. Large windows in the background display a view of trees and city buildings.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "indoor room with large glass windows",
+        "objects": [
+          "table",
+          "tumbler",
+          "small basket",
+          "can",
+          "laptop",
+          "chairs"
+        ],
+        "activity": "sitting",
+        "description": "A younger man wearing glasses and a dark t-shirt sits at a wooden table inside a room with large windows overlooking trees and buildings.",
+        "usable": true
+      },
+      {
+        "people": 1,
+        "who": [
+          "a younger man"
+        ],
+        "setting": "indoors near large windows",
+        "objects": [
+          "desk",
+          "tumbler",
+          "small basket",
+          "can",
+          "laptop",
+          "bag"
+        ],
+        "activity": "standing",
+        "description": "A younger man stands indoors next to a wooden desk featuring a tumbler, small basket, and a laptop. Large windows in the background display trees and buildings.",
+        "usable": true
+      }
+    ],
+    "notes": [],
+    "sensitive": []
+  },
+  {
+    "id": "e7",
+    "start": "2026-11-01T16:10:00",
+    "end": "2026-11-01T16:10:15",
+    "frames": [
+      "20261101-161000_0000s.jpg",
+      "20261101-161000_0005s.jpg",
+      "20261101-161000_0010s.jpg",
+      "20261101-161000_0015s.jpg"
+    ],
+    "sources": [
+      "20261101-161000.mp4@0s",
+      "20261101-161000.mp4@5s",
+      "20261101-161000.mp4@10s",
+      "20261101-161000.mp4@15s"
+    ],
+    "observations": [
+      {
+        "people": 2,
+        "who": [
+          "a younger man in the doorway",
+          "a younger man inside"
+        ],
+        "setting": "indoors near large glass windows with a view of a city and river outside",
+        "objects": [
+          "glass doors",
+          "large windows",
+          "red shopping bag",
+          "glasses"
+        ],
+        "activity": "standing near a glass door holding a bag",
+        "description": "Two younger men are positioned near a glass doorway inside a building with large windows overlooking a city skyline. One man stands outside the door holding a red bag, while the other stands inside.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "a younger man",
+          "another younger person"
+        ],
+        "setting": "indoors near large glass windows overlooking a city and water view",
+        "objects": [
+          "red bag",
+          "glasses",
+          "dark jackets",
+          "jeans"
+        ],
+        "activity": "standing near a doorway holding a red bag",
+        "description": "Two younger people stand near large glass windows, with one holding a red bag. A view of trees, water, and buildings is visible outside.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "a younger man",
+          "another younger man"
+        ],
+        "setting": "indoors near a glass doorway with a view of buildings and trees outside",
+        "objects": [
+          "red bag",
+          "glasses",
+          "hoodie",
+          "jacket"
+        ],
+        "activity": "exchanging a red bag",
+        "description": "Two younger men stand near a glass doorway while handing a red bag back and forth. Tall windows show trees and city buildings outside.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "a younger man",
+          "a person standing outside"
+        ],
+        "setting": "indoor space with large glass windows and doors",
+        "objects": [
+          "glass door",
+          "glasses",
+          "black jacket",
+          "buildings visible outside",
+          "trees"
+        ],
+        "activity": "standing near a glass door",
+        "description": "A younger man wearing glasses and a black jacket stands inside near a large glass door. Another person is visible just outside the open door.",
+        "usable": true
+      }
+    ],
+    "notes": [],
+    "sensitive": []
+  },
+  {
+    "id": "e8",
+    "start": "2026-11-01T17:00:00",
+    "end": "2026-11-01T17:00:10",
+    "frames": [
+      "20261101-170000_0000s.jpg",
+      "20261101-170000_0005s.jpg",
+      "20261101-170000_0010s.jpg"
+    ],
+    "sources": [
+      "20261101-170000.mp4@0s",
+      "20261101-170000.mp4@5s",
+      "20261101-170000.mp4@10s"
+    ],
+    "observations": [
+      {
+        "people": 2,
+        "who": [
+          "a person with dark hair wearing glasses and a black shirt",
+          "a person wearing a cap, glasses, and a grey shirt"
+        ],
+        "setting": "An indoor room with large windows showing outdoor trees and buildings.",
+        "objects": [
+          "toy farm set",
+          "table",
+          "chairs",
+          "glasses",
+          "cap"
+        ],
+        "activity": "playing with a toy farm set",
+        "description": "Two people are standing by a table indoors, interacting with a colorful toy farm set. Large windows behind them show an outdoor view of trees and buildings.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "a person sitting at a table",
+          "a person standing behind a table"
+        ],
+        "setting": "indoors near large glass windows",
+        "objects": [
+          "toy farm playset",
+          "table",
+          "chair"
+        ],
+        "activity": "playing with a toy farm set",
+        "description": "A person sits at a round table looking at a plastic toy farm playset while another person stands behind them with a hand on their shoulder.",
+        "usable": true
+      },
+      {
+        "people": 2,
+        "who": [
+          "a younger man with glasses",
+          "a partial figure of a person"
+        ],
+        "setting": "indoors near large windows with a view of trees and buildings outside",
+        "objects": [
+          "table",
+          "chairs",
+          "toy farmhouse",
+          "glasses"
+        ],
+        "activity": "playing with a toy farmhouse",
+        "description": "A younger man with glasses sits at a round table indoors, playing with a colorful toy farmhouse. Large windows behind him show trees and buildings outside.",
+        "usable": true
+      }
+    ],
+    "notes": [
+      "The visitor was his grandson Leo; they played with a toy farm together."
+    ],
+    "sensitive": []
+  }
+]

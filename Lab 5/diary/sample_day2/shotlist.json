@@ -1,0 +1,99 @@
+[
+  {
+    "id": "clip01",
+    "time": "2026-10-28T08:00:00",
+    "start_frame": "keyframes/clip01_start.png",
+    "duration_s": 15,
+    "motion_prompt": "The older woman gently continues watering the plant with the small watering can. Fixed camera.",
+    "event_id": "watering",
+    "test_purpose": "Keep usable frames and establish a separate morning event.",
+    "planned_video_file": "20261028-080000.mp4"
+  },
+  {
+    "id": "clip02",
+    "time": "2026-10-28T10:15:00",
+    "start_frame": "keyframes/clip02_start.png",
+    "duration_s": 60,
+    "motion_prompt": "The older woman and caregiver slowly walk together along the same garden path toward the camera, which moves gently backward.",
+    "event_id": "walk",
+    "test_purpose": "Continuous one-minute sequence: sample every five seconds, assess repeated frames and grouping as one event.",
+    "planned_video_file": "20261028-101500.mp4",
+    "segments": [
+      {
+        "id": "clip02_segment01",
+        "duration_s": 12,
+        "motion_prompt": "The older woman and caregiver slowly begin walking together along the garden path toward the camera, which moves gently backward."
+      },
+      {
+        "id": "clip02_segment02",
+        "duration_s": 12,
+        "motion_prompt": "Continue walking toward the camera along the same path, matching the previous final frame; the camera moves gently backward."
+      },
+      {
+        "id": "clip02_segment03",
+        "duration_s": 12,
+        "motion_prompt": "Continue the same slow walk toward the camera on the same path, preserving the people, clothing, direction and surroundings."
+      },
+      {
+        "id": "clip02_segment04",
+        "duration_s": 12,
+        "motion_prompt": "Continue forward on the same path with natural small steps; the camera keeps moving gently backward."
+      },
+      {
+        "id": "clip02_segment05",
+        "duration_s": 12,
+        "motion_prompt": "Continue the same walk toward the camera on the same path, ending mid-stride without stopping."
+      }
+    ]
+  },
+  {
+    "id": "clip03",
+    "time": "2026-10-28T12:30:00",
+    "start_frame": "keyframes/clip03_start.png",
+    "duration_s": 15,
+    "motion_prompt": "The older woman and caregiver slowly place utensils on the table. Fixed camera.",
+    "event_id": "lunch",
+    "test_purpose": "Shared activity and separate event.",
+    "planned_video_file": "20261028-123000.mp4"
+  },
+  {
+    "id": "clip04",
+    "time": "2026-10-28T14:00:00",
+    "start_frame": "keyframes/clip04_start.png",
+    "duration_s": 15,
+    "motion_prompt": "The older woman rests nearly motionless, with only subtle breathing. Fixed camera.",
+    "event_id": "nap",
+    "test_purpose": "Near-static sampled frames may be removed as duplicates.",
+    "planned_video_file": "20261028-140000.mp4"
+  },
+  {
+    "id": "clip05",
+    "time": "2026-10-28T15:20:00",
+    "start_frame": "keyframes/clip05_start.png",
+    "duration_s": 15,
+    "motion_prompt": "The delivery visitor and older woman gently complete the handover of the plain parcel at the doorway. Fixed camera.",
+    "event_id": "delivery",
+    "test_purpose": "Retain the delivery scene without inventing a name or relationship for the visitor.",
+    "planned_video_file": "20261028-152000.mp4"
+  },
+  {
+    "id": "clip06",
+    "time": "2026-10-28T16:00:00",
+    "start_frame": "keyframes/clip06_start.png",
+    "duration_s": 15,
+    "motion_prompt": "Anna and the older woman slowly place a puzzle piece on the table. Fixed camera.",
+    "event_id": "anna_visit",
+    "test_purpose": "Use the caregiver note to identify Anna; do not infer conversation or feelings.",
+    "planned_video_file": "20261028-160000.mp4"
+  },
+  {
+    "id": "clip07",
+    "time": "2026-10-28T17:30:00",
+    "start_frame": "keyframes/clip07_start.png",
+    "duration_s": 15,
+    "motion_prompt": "The camera slowly turns from the lit living room into the unlit hallway; the latter half becomes very dark. No people enter.",
+    "event_id": "hallway",
+    "test_purpose": "Retain usable early frames and filter sufficiently dark later samples; verify actual brightness.",
+    "planned_video_file": "20261028-173000.mp4"
+  }
+]

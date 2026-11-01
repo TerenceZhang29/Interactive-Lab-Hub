@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-28",
+  "usage": "Evaluation only; do not provide this file to the pipeline. Planned videos and filtering expectations must be checked against actual generated media.",
+  "records": [
+    {
+      "file": "20261028-080000.mp4",
+      "local_datetime": "2026-10-28T08:00:00",
+      "scene": "The older woman waters a plant beside a window.",
+      "event_id": "watering",
+      "expected_filtering": "Keep usable sampled frames; actual filter decisions depend on the generated video.",
+      "status": "planned; video not generated"
+    },
+    {
+      "file": "20261028-084000.jpg",
+      "local_datetime": "2026-10-28T08:40:00",
+      "scene": "Older woman at the table with a bowl of oatmeal and berries and a mug.",
+      "event_id": "breakfast",
+      "expected_filtering": "Keep if it passes actual quality and duplicate thresholds.",
+      "status": "still photograph"
+    },
+    {
+      "file": "20261028-101500.mp4",
+      "local_datetime": "2026-10-28T10:15:00",
+      "scene": "The older woman and caregiver walk together on a garden path.",
+      "event_id": "walk",
+      "expected_filtering": "Keep usable sampled frames; actual filter decisions depend on the generated video.",
+      "status": "planned; video not generated"
+    },
+    {
+      "file": "20261028-123000.mp4",
+      "local_datetime": "2026-10-28T12:30:00",
+      "scene": "The older woman and caregiver set utensils on the dining table.",
+      "event_id": "lunch",
+      "expected_filtering": "Keep usable sampled frames; actual filter decisions depend on the generated video.",
+      "status": "planned; video not generated"
+    },
+    {
+      "file": "20261028-140000.mp4",
+      "local_datetime": "2026-10-28T14:00:00",
+      "scene": "The older woman rests in a window-side armchair.",
+      "event_id": "nap",
+      "expected_filtering": "Later near-identical sampled frames are candidates for near-duplicate filtering; retain an initial usable frame.",
+      "status": "planned; video not generated"
+    },
+    {
+      "file": "20261028-152000.mp4",
+      "local_datetime": "2026-10-28T15:20:00",
+      "scene": "A delivery worker offers a parcel at the front door.",
+      "event_id": "delivery",
+      "expected_filtering": "Keep usable sampled frames; actual filter decisions depend on the generated video.",
+      "status": "planned; video not generated"
+    },
+    {
+      "file": "20261028-160000.mp4",
+      "local_datetime": "2026-10-28T16:00:00",
+      "scene": "The older woman and her daughter Anna work on a puzzle.",
+      "event_id": "anna_visit",
+      "expected_filtering": "Keep usable sampled frames; actual filter decisions depend on the generated video.",
+      "status": "planned; video not generated"
+    },
+    {
+      "file": "20261028-173000.mp4",
+      "local_datetime": "2026-10-28T17:30:00",
+      "scene": "The camera turns from the living room into a dark hallway.",
+      "event_id": "hallway",
+      "expected_filtering": "Later samples with grayscale mean below 45 should be filtered as too dark; retain sufficiently bright and sharp early samples.",
+      "status": "planned; video not generated"
+    },
+    {
+      "file": "20261028-190000.jpg",
+      "local_datetime": "2026-10-28T19:00:00",
+      "scene": "Older woman beside a radio in the living room.",
+      "event_id": "evening_radio",
+      "expected_filtering": "Keep if it passes actual quality and duplicate thresholds.",
+      "status": "still photograph"
+    }
+  ]
+}
