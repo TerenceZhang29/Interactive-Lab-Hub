@@ -127,6 +127,10 @@ Hold colored objects near sensor to change your pixel!
 
 **📸 Include: Screenshot of grid + photo of your Pi setup**
 
+> ![Class pixel grid with 33 Pis; ours, jarvis, is outlined in white at the bottom row, third from the left](imgs/pixel-grid-jarvis.jpg)
+>
+> Our Pi, `jarvis` (MAC `88:a2:9e:c8:51:29`), joined as the 33rd pixel, outlined in white above. It publishes the APDS-9960 reading to `IDD/pixelgrid/colors` about ten times a second.
+
 ---
 
 ## Part C: Make Your Own
