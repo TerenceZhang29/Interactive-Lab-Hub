@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yesterday Together: Audio Diary</title>
+  <style>
+    :root { --paper:#f7f3ea; --ink:#292b2d; --muted:#74797b; --line:#c8c7c1; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#deddd8; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+    .tools { max-width:1280px; margin:auto; padding:14px 48px; display:flex; justify-content:flex-end; }
+    .tools a { color:#616769; font-size:12px; text-underline-offset:3px; }
+    .tools a:focus-visible { outline:2px solid #367e78; outline-offset:4px; }
+    .page { width:1280px; max-width:100%; margin:auto; padding:46px 48px 50px; background:var(--paper); }
+    h1 { margin:0 0 35px; font:700 32px/1 Georgia,"Times New Roman",serif; letter-spacing:-.025em; }
+    .route + .route { margin-top:50px; }
+    h2 { display:flex; align-items:center; gap:14px; margin:0 0 18px; color:var(--muted); font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    h2::after { content:""; flex:1; height:1px; background:var(--line); }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:29px 18px; }
+    figure { margin:0; min-width:0; }
+    .frame { position:relative; width:100%; aspect-ratio:4/3; background:var(--paper); border:1px solid var(--line); overflow:hidden; }
+    img { width:100%; height:100%; display:block; object-fit:contain; }
+    .number { position:absolute; top:10px; left:10px; width:28px; height:28px; display:grid; place-items:center; border-radius:50%; background:#73797c; color:#faf8f2; font-size:10px; font-weight:700; }
+    figcaption { padding-top:8px; }
+    figcaption strong { display:block; font:700 18px/1.15 Georgia,"Times New Roman",serif; }
+    figcaption span { display:block; margin-top:4px; color:var(--muted); font-size:10px; line-height:1.4; letter-spacing:.06em; text-transform:uppercase; }
+    .done figcaption strong { color:#ad5e3c; }
+    .rhythm { display:flex; justify-content:space-between; align-items:center; gap:40px; border-top:1px solid var(--line); margin-top:38px; padding-top:20px; }
+    .rhythm p { margin:0; display:flex; gap:28px; color:var(--muted); font-size:10px; letter-spacing:.06em; text-transform:uppercase; line-height:1.6; }
+    .rhythm p span { display:block; }
+    .rhythm b { display:block; font-weight:700; }
+    .wave { display:flex; align-items:center; gap:18px; color:var(--muted); }
+    .wave-label { font:italic 13px Georgia,"Times New Roman",serif; white-space:nowrap; }
+    .wave svg { width:260px; height:60px; overflow:visible; }
+    .wave path,.wave line { stroke:#8b908f; stroke-width:1.2; fill:none; }
+    .wave text { fill:var(--muted); font:9px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:.02em; }
+    @media (max-width:760px) { .page { padding:28px 20px; } .tools { padding:14px 20px; } .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .rhythm { flex-direction:column; align-items:flex-start; gap:20px; } }
+    @media (max-width:460px) { .grid { grid-template-columns:1fr; } h2 { font-size:10px; letter-spacing:.1em; } .wave { flex-direction:column; align-items:flex-start; gap:8px; } .rhythm p { gap:20px; } }
+    @media print { .tools { display:none; } body { background:var(--paper); } figure { break-inside:avoid; } }
+  
+    h1 { margin-bottom:27px; }
+    .frame { container-type:inline-size; }
+    figcaption { padding-top:10px; }
+    figcaption .caption { margin-top:6px; color:#5c6263; font-size:13px; line-height:1.45; letter-spacing:0; text-transform:none; }
+    figcaption .status { font-size:11px; letter-spacing:.025em; text-transform:none; }
+    .screen-status { position:absolute; color:#414747; text-align:center; line-height:1.25; font-weight:500; }
+    .handoff { left:55%; top:49%; width:28%; transform:rotate(5deg); font-size:3cqw; }
+    .processing { left:44%; top:53%; width:28%; transform:rotate(5deg); font-size:3.4cqw; }
+    .review-ui { position:absolute; left:53.5%; top:26.8%; width:37%; height:37%; transform:rotate(-5deg) skewX(-5deg); background:#f9f6ef; padding:1.5%; font: 1.4cqw/1.2 Arial,sans-serif; color:#39433c; overflow:hidden; }
+    .review-title { font-weight:bold; font-size:1.7cqw; }
+    .timeline { margin:2% 0; padding:2% 0; border-bottom:1px solid #c4c9bb; color:#6f8570; white-space:nowrap; }
+    .warning { background:#f8e8cf; color:#a35b18; padding:2%; font-weight:bold; border-left:2px solid #ca8431; }
+    .chapter { position:relative; background:white; border:1px solid #e7e1d8; margin-top:2%; padding:2%; padding-right:27%; height:25%; }
+    .thumb { position:absolute; right:2%; top:10%; height:65%; width:21%; background:url('assets/storyboard-audio-diary-v2/05-listen.png') 74% 56% / 400% auto; }
+    .actions { color:#61856a; margin-top:2%; white-space:nowrap; }
+
+  </style>
+</head>
+<body>
+  <nav class="tools" aria-label="Download"><a href="storyboard-audio-diary-v2-render.png" download>Download PNG</a></nav>
+  <main class="page" id="storyboard">
+    <h1>Yesterday Together: Audio Diary</h1>
+<section class="route" aria-labelledby="revision"><h2 id="revision">Revised concept · From selection to review</h2><div class="grid">
+<figure><div class="frame"><img src="assets/storyboard-audio-diary-v2/01-select.png" alt="The caregiver selects photos and clips on a phone in the evening."><span class="number">01</span></div><figcaption><strong>Choose the day’s moments</strong><span class="caption">The caregiver selects clips and adds factual notes on a phone.</span><span class="status">Evening</span></figcaption></figure>
+<figure><div class="frame"><img src="assets/storyboard-audio-diary-v2/02-handoff.png" alt="The older adult presses the single large button beside the caregiver; the device confirms the handoff."><span class="number">02</span><span class="screen-status handoff">Diary received.<br>Preparing overnight.</span></div><figcaption><strong>One bedtime handoff</strong><span class="caption">Press “Prepare My Diary”; the device confirms receipt.</span></figcaption></figure>
+<figure><div class="frame"><img src="assets/storyboard-audio-diary-v2/03-processing.png" alt="The device works alone away from the sleeping person, with a cloud upload symbol and no camera."><span class="number">03</span><span class="screen-status processing">Processing</span></div><figcaption><strong>The device works overnight</strong><span class="caption">Selected frames go to a cloud vision model; no camera watches the bed.</span><span class="status">Processing</span></figcaption></figure>
+<figure><div class="frame"><img src="assets/storyboard-audio-diary-v2/04-review.png" alt="The caregiver reviews a morning page with a timeline, a Check first knife warning and chapter cards."><span class="number">04</span><div class="review-ui" aria-hidden="true"><div class="review-title">Morning review</div><div class="timeline">●───○───●───●───○</div><div class="warning">Check first: knife</div><div class="chapter"><b>Morning moment</b><div class="thumb"></div><div class="actions">Approve &nbsp; Edit &nbsp; Remove</div></div><div class="chapter"><b>Afternoon moment</b><div class="thumb"></div><div class="actions">Approve &nbsp; Edit &nbsp; Remove</div></div></div></div><figcaption><strong>Review before playback</strong><span class="caption">The caregiver checks source images and approves each chapter.</span><span class="status">Check first: knife · review buttons are a mockup</span></figcaption></figure>
+<figure><div class="frame"><img src="assets/storyboard-audio-diary-v2/05-listen.png" alt="The older adult presses the single button as the device shows a photograph and the speaker plays."><span class="number">05</span></div><figcaption><strong>Listen together</strong><span class="caption">Play approved chapters with their photos, at the user’s pace.</span><span class="status">Planned · Pause / Replay / Next</span></figcaption></figure>
+</div></section>
+
+  </main>
+</body>
+</html>

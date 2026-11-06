@@ -1,10 +1,12 @@
 # Observant Systems: Overnight Sensation
 
-**Team:**
+> The course instructions are kept in ordinary text. Our answers, experiment notes, images and videos appear in blockquotes.
 
-**Members:** Full Name (netid, github-handle), ...
-
-**Project name:**
+> Team: Jiesen Huang, Serena Tsai, Yuge Xu, Youzhu Jin, Zijii Zhang, and Terence Zhang
+>
+> Members: Jiesen Huang ([certaindragon3](https://github.com/certaindragon3)), Serena Tsai (ht534, [ht534-ui](https://github.com/ht534-ui)), Yuge Xu (yx692, [Yuge-225](https://github.com/Yuge-225)), Youzhu Jin (yj578), Zijii Zhang (zz894), and Terence Zhang ([TerenceZhang29](https://github.com/TerenceZhang29))
+>
+> Project name: Yesterday Together: Audio Diary
 
 <details>
 	<summary><strong>Instructions for Students (Click to Expand)</strong></summary>
@@ -28,6 +30,8 @@ This lab will help you think through the design of observant systems, particular
 
 **Please indicate anyone that helped with this Lab here.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+
+> Terence Zhang completed Part 1 (A–E) on his Pi. Our friends acted out the real day in Part H, knife and pumpkin included. A teammate's Raspberry Pi hosted our first pipeline runs before we moved to Orange. AI tools are listed in the [AI disclosure](#ai-disclosure) at the end.
 
 ## Overview
 
@@ -450,11 +454,25 @@ Use storyboards and/or [Verplank diagrams](https://ccrma.stanford.edu/courses/25
 
 1. Look at and give feedback on the Part F storyboards.
    **Put the feedback for your ideas here.**
+
+   > **Feedback from inside our team** (we did not record feedback from other groups): our text deliverable was too thin. A list of chapters and a score table do not show that the recap is actually working; we needed something like a dashboard, an output you can take in at a glance.
+   >
+   > **What we changed:** every run now ends with a caregiver's morning page ([Part I](#part-i)): the day on a timeline, a **Check first** warning, each chapter beside the frames it came from, and a wall of what was left out and why. Frame 4 of the revised storyboard below is that page.
 2. [Update your Lab Hub](prep.md#get-the-latest-content) to get the latest content for Part 2.
 3. Decide where the device will spend the night and who else lives there. Get their OK before the first run.
 4. Revise your storyboard with the feedback and with what you learned in Part E about where the pipeline breaks.
 
 \*\*\***Post your revised storyboard here.**\*\*\*
+
+> ![Five-frame revised storyboard: evening selection, bedtime handoff, overnight processing, caregiver review and planned playback.](storyboard-audio-diary-v2-render.png)
+>
+> [HTML source / local preview](storyboard-audio-diary-v2.html) · [Illustration prompts](assets/storyboard-audio-diary-v2/prompts.md)
+>
+> **What changed from the first version and why.** We moved selecting and annotating the day’s material to the evening, so the bedtime ritual can be a single “Prepare My Diary” handoff instead of a whole editing session. The Pi then works through selected daytime material without a camera watching the bed; frames go to a cloud vision model, as in our actual pipeline. In the morning, the caregiver gets a separate review step with a timeline, source images and a **Check first** warning. Our test flagged a pumpkin-carving knife and left it out of the narration, but missed a smaller blade, so the warning is useful, not a guarantee. Wording also changes between runs, which is why each chapter needs a human check before approval.
+>
+> Frame 4 is our answer to the team feedback above: the review step now has a real page behind it ([Part I](#part-i)).
+>
+> Frame 5 is planned: playback and its controls are not implemented. The review page exists, but its Approve/Edit/Remove buttons are still a mockup; the bedtime trigger and a real overnight run also remain to be tested.
 
 ## Part G. 
 ### Design the interaction before
@@ -485,6 +503,8 @@ The hand-off: the person tells the device what to watch tonight, and the device 
 > “Today’s records have been received. Your diary will be prepared overnight.”
 >
 > This confirmation makes the handoff visible and gives the user a clear expectation for the morning. Once the task begins, the Pi should continue without requiring the user to supervise it.
+>
+> *Update after testing:* steps 1–3 do not fit in a thirty-second ritual, so the [revised storyboard](#prep-for-part-2) moves selecting, removing and annotating to the evening. Bedtime is now step 4 alone: one press, one confirmation. The bedtime trigger itself is not built yet; in our tests the pipeline was started over ssh.
 
 ## Part H. 
 ### Incorporate the observant system
@@ -757,6 +777,8 @@ Document all the prototypes and iterations you have designed and worked on. The 
 * "Acts like": how a person hands the night over and what they get back.
 
 \*\*\***Include a short video of the whole system**\*\*\*
+
+> We do not have one end-to-end video, because the bedtime button and the morning playback are not built. What exists is shown instead: [four captioned clips](#part-h) of the real day, each with the sentence the diary wrote about it, and the [morning page](#part-i) the pipeline produced from them.
 
 As always, make sure you document contributions and ideas from others (and AI) explicitly in your writeup.
 
