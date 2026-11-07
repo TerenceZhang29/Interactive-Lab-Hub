@@ -1,0 +1,4 @@
+Adafruit-Blinka>=8.64.0
+adafruit-circuitpython-apds9960>=3.1.9
+lgpio>=0.2.2.0
+paho-mqtt>=2.0,<3

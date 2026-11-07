@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Campfire</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f5e7d3;
+      --muted: #c8b9a7;
+      --dim: #aa9b8b;
+      --gold: #f6b772;
+      --line: #443328;
+      --panel: #1d1514;
+      font-family: system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: radial-gradient(ellipse at 30% 105%, #322019 0%, #100d10 64%);
+    }
+    main {
+      width: min(100%, 2200px);
+      min-height: 100svh;
+      margin: auto;
+      padding: clamp(16px, 2.6vw, 52px);
+      display: grid;
+      grid-template-rows: minmax(380px, 1fr) auto;
+      gap: clamp(12px, 1.2vw, 26px);
+    }
+    h1, h2, p, figure { margin: 0; }
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0;
+      margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+    }
+    .stage {
+      display: grid;
+      grid-template-columns: minmax(0, 1.82fr) minmax(0, 1fr);
+      gap: clamp(12px, 1.2vw, 26px);
+      min-height: 0;
+    }
+    .scene, .story, .station {
+      border: 1px solid var(--line);
+      border-radius: clamp(12px, 1.15vw, 24px);
+    }
+    .scene {
+      position: relative;
+      isolation: isolate;
+      min-width: 0;
+      overflow: hidden;
+      background: #120f17;
+      --flame-size: .18;
+      --flame-light: .34;
+      --glow-light: .12;
+    }
+    .scene > svg { display: block; width: 100%; height: 100%; position: absolute; inset: 0; }
+    .scene::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      box-shadow: inset 0 0 95px 8px #0c080bb0;
+    }
+    .glow { opacity: var(--glow-light); transition: opacity 420ms ease-out; }
+    .flames {
+      transform-box: fill-box;
+      transform-origin: center bottom;
+      transform: scale(.94, var(--flame-size));
+      opacity: var(--flame-light);
+      transition: transform 420ms ease-out, opacity 420ms ease-out;
+    }
+    .flicker {
+      transform-box: fill-box;
+      transform-origin: center bottom;
+      animation: flicker 1.15s ease-in-out infinite alternate;
+    }
+    @keyframes flicker {
+      from { transform: scale(.97, .94) skewX(-2.4deg); }
+      to { transform: scale(1.025, 1.035) skewX(2.2deg); }
+    }
+    .controls {
+      z-index: 1;
+      position: absolute;
+      top: clamp(12px, 1.4vw, 26px);
+      left: clamp(12px, 1.4vw, 26px);
+      display: flex;
+      gap: 8px;
+    }
+    .controls button {
+      display: grid;
+      place-items: center;
+      padding: 0;
+      width: clamp(37px, 2.5vw, 54px);
+      aspect-ratio: 1;
+      color: var(--muted);
+      background: #141118e8;
+      border: 1px solid #4b3831;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .controls button[hidden] { display: none; }
+    .controls button:disabled { opacity: .55; cursor: wait; }
+    .controls button:hover, .controls button[aria-pressed="true"] { color: var(--gold); border-color: #917052; }
+    .controls button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .controls svg { width: 48%; height: 48%; fill: none; stroke: currentColor; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
+    .sound-waves, .controls button[aria-pressed="true"] .sound-slash { display: none; }
+    .controls button[aria-pressed="true"] .sound-waves { display: inline; }
+    .connection {
+      position: absolute;
+      z-index: 1;
+      right: clamp(12px, 1.4vw, 26px);
+      top: clamp(12px, 1.4vw, 26px);
+      background: #251813;
+      border: 1px solid var(--line);
+      color: var(--gold);
+      padding: 8px 13px;
+      border-radius: 12px;
+    }
+    .connection:empty { display: none; }
+    .story {
+      min-width: 0;
+      padding: clamp(18px, 2.25vw, 48px);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(16px, 2.15vh, 29px);
+      background: radial-gradient(ellipse at 80% 105%, #352119 0%, #1d1515 76%);
+    }
+    .story h2 {
+      color: var(--gold);
+      font-size: clamp(.95rem, 1.22vw, 1.6rem);
+      font-weight: 650;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    .story-lines { flex: 1; align-content: center; }
+    .story-lines p {
+      font-family: Georgia, serif;
+      font-size: clamp(1.25rem, min(2.1vw, 4vh), 2.9rem);
+      line-height: 1.24;
+      text-wrap: pretty;
+      color: var(--muted);
+    }
+    .story-lines p + p { margin-top: clamp(.65rem, 1.8vh, 1.3rem); }
+    .story-lines p:last-child { color: var(--ink); }
+    .story-lines .waiting { color: var(--dim); }
+    .progress-label { color: var(--muted); font-size: clamp(.92rem, 1.06vw, 1.35rem); margin-bottom: 8px; }
+    progress {
+      appearance: none; display: block; width: 100%; height: clamp(5px, .7vh, 10px);
+      border: 0; border-radius: 99px; overflow: hidden; background: #4a362c;
+    }
+    progress::-webkit-progress-bar { background: #4a362c; }
+    progress::-webkit-progress-value { background: var(--gold); }
+    progress::-moz-progress-bar { background: var(--gold); }
+    .stations { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.2vw, 26px); }
+    .station { min-width: 0; padding: clamp(14px, 1.25vw, 26px); background: var(--panel); }
+    .station[data-ready="true"] { border-color: #816044; }
+    .station h2 {
+      font-size: clamp(.92rem, 1.36vw, 1.8rem);
+      font-weight: 650;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .station-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .level { font-size: clamp(1.3rem, 2.05vw, 2.85rem); line-height: 1; font-variant-numeric: tabular-nums; }
+    .meter { position: relative; height: clamp(7px, 1.2vh, 14px); margin: 12px 0 10px; border-radius: 99px; background: #4a362c; overflow: hidden; }
+    .fill { height: 100%; width: 0; background: linear-gradient(90deg, #c7784d, var(--gold)); transition: width 180ms ease-out; }
+    .target-band {
+      position: absolute; inset: 0 auto 0 var(--target-start, 55%); width: var(--target-width, 45%);
+      border-inline-start: 2px solid #f5d3af; background: #ffe2be23;
+    }
+    [data-station="wind"] .target-band { --target-start: 30%; --target-width: 40%; border-inline-end: 2px solid #f5d3af; }
+    .station-state { color: var(--muted); font-weight: 650; font-size: clamp(.85rem, 1.05vw, 1.35rem); }
+    .station[data-ready="true"] .station-state { color: var(--gold); }
+    .target-copy { color: var(--dim); font-size: clamp(.76rem, .94vw, 1.2rem); margin-top: 3px; }
+    @media (min-width: 1050px) and (min-height: 650px) {
+      main { height: 100svh; }
+    }
+    @media (max-width: 780px) {
+      main { display: block; }
+      .stage { grid-template-columns: 1fr; }
+      .scene { min-height: 230px; aspect-ratio: 1.6; }
+      .stations { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="visually-hidden">Digital Campfire</h1>
+    <div class="stage">
+      <figure class="scene" id="scene">
+        <div class="controls">
+          <button id="sound-button" type="button" aria-label="Campfire sound" title="Campfire sound" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 9h4l5-4v14l-5-4H4z"/>
+              <path class="sound-slash" d="m17 10 4 4m0-4-4 4"/>
+              <path class="sound-waves" d="M16 9a4 4 0 0 1 0 6m2-8a7 7 0 0 1 0 10"/>
+            </svg>
+          </button>
+          <button id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen" hidden>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>
+          </button>
+          <button id="reset-button" type="button" aria-label="Reset story" title="Reset story">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11a8 8 0 1 1 2 6m-2-6V5m0 6h6"/></svg>
+          </button>
+        </div>
+        <p class="connection" id="connection" role="status">Connecting…</p>
+        <audio id="fire-audio" loop preload="none" src="{{ url_for('static', filename='campfire.mp3') }}"></audio>
+        <svg viewBox="0 0 520 330" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="sky" x2="0" y2="1">
+              <stop stop-color="#110f1a"/>
+              <stop offset="1" stop-color="#2b1b27"/>
+            </linearGradient>
+            <radialGradient id="light" cx="50%" cy="73%" r="48%">
+              <stop stop-color="#e68139" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#e68139" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="outer" x2="0" y2="1">
+              <stop stop-color="#ff6c38"/>
+              <stop offset="1" stop-color="#df4626"/>
+            </linearGradient>
+            <linearGradient id="inner" x2="0" y2="1">
+              <stop stop-color="#ffd57a"/>
+              <stop offset="1" stop-color="#ff954e"/>
+            </linearGradient>
+            <path id="pine" d="M0 0l-8 18h4l-8 13h5l-10 15h14v10h6V46h14L7 31h5L4 18h4Z"/>
+          </defs>
+          <rect width="520" height="330" fill="url(#sky)"/>
+          <g fill="#c2a59d" opacity=".72">
+            <circle cx="106" cy="78" r="1.5"/><circle cx="169" cy="47" r="1.4"/>
+            <circle cx="228" cy="78" r="1.3"/><circle cx="315" cy="59" r="1.4"/>
+            <circle cx="365" cy="32" r="1.7"/><circle cx="408" cy="92" r="1.5"/>
+            <circle cx="478" cy="58" r="1.3"/><circle cx="60" cy="108" r="1.3"/>
+          </g>
+          <path fill="#30242a" d="M0 237 71 179l39 19 53-55 65 54 67-35 52 39 73-45 100 79v95H0Z"/>
+          <path fill="#241d24" d="m0 233 76-12 70 25 71-20 59 14 65-24 79 19 100-24v119H0Z"/>
+          <g fill="#1d1720">
+            <use href="#pine" transform="translate(37 174) scale(1.22)"/>
+            <use href="#pine" transform="translate(65 185) scale(.84)"/>
+            <use href="#pine" transform="translate(87 202) scale(.63)"/>
+            <use href="#pine" transform="translate(460 175) scale(1.15)"/>
+            <use href="#pine" transform="translate(491 151) scale(1.45)"/>
+            <use href="#pine" transform="translate(437 197) scale(.71)"/>
+          </g>
+          <rect class="glow" width="520" height="330" fill="url(#light)"/>
+          <ellipse cx="260" cy="280" rx="112" ry="20" fill="#151317" opacity=".66"/>
+          <g fill="#6a5150" stroke="#281e22" stroke-width="3">
+            <path d="m163 269 18-12 21 4 9 12-18 12-24-2Z"/>
+            <path d="m197 289 15-11 24-1 13 12-13 11-27 1Z"/>
+            <path d="m246 295 16-12 24 1 12 10-10 10-29 1Z"/>
+            <path d="m296 290 13-11 22-1 15 11-8 10-28 2Z"/>
+            <path d="m331 271 12-12 20-1 15 12-8 13-24 3Z"/>
+          </g>
+          <g stroke-linecap="round">
+            <path d="m210 267 99 10m-6-16-91 19" fill="none" stroke="#512d24" stroke-width="16"/>
+            <path d="m210 265 99 10m-6-16-91 19" fill="none" stroke="#8a4a31" stroke-width="6"/>
+          </g>
+          <g class="flames">
+            <g class="flicker">
+              <path fill="url(#outer)" d="M259 274c-42 0-66-22-62-53 2-16 14-27 21-45 4 13 2 22 8 27 8-20 31-30 32-59 1-12-1-26 2-43 17 21 26 39 25 65-1 16 6 25 13 31 1-16 8-24 12-36 0 28 20 43 17 68-3 31-31 45-68 45Z"/>
+              <path fill="url(#inner)" d="M260 273c-28 0-45-16-42-36 2-12 9-16 14-29 2 12 5 18 12 22 0-27 24-41 23-70 15 16 18 30 17 48 0 11 5 17 11 23 4-8 8-16 9-25 9 15 9 30 4 42-7 17-25 25-48 25Z"/>
+              <path fill="#fff2b2" d="M260 272c-15 0-23-8-23-18 1-10 10-14 11-24 5 7 8 14 9 17 3-12 14-17 15-33 8 10 8 20 7 28 9-5 11-10 12-14 6 10 5 24 0 31-6 9-17 13-31 13Z"/>
+            </g>
+            <g fill="#ffab57">
+              <circle cx="226" cy="158" r="3"/><circle cx="291" cy="137" r="2.5"/>
+              <circle cx="314" cy="121" r="2"/><circle cx="241" cy="129" r="2"/>
+            </g>
+          </g>
+        </svg>
+      </figure>
+
+      <section class="story" aria-labelledby="story-heading" data-story-length="{{ story_length|default(0) }}">
+        <h2 id="story-heading">Story</h2>
+        <div class="story-lines" id="story-lines" aria-live="polite" aria-relevant="additions text">
+          <p class="waiting">Waiting for a steady fire.</p>
+        </div>
+        <p class="progress-label" id="steady-label">Hold steady for 3 seconds</p>
+        <progress id="steady-progress" max="1" value="0" aria-labelledby="steady-label"></progress>
+      </section>
+    </div>
+
+    <section class="stations" aria-label="Campfire stations">
+      <article class="station" data-station="heat">
+        <div class="station-head"><h2 id="heat-label">Heat</h2><span class="level">—</span></div>
+        <div class="meter" role="meter" aria-labelledby="heat-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="Offline">
+          <div class="fill"></div><div class="target-band"></div>
+        </div>
+        <p class="station-state">Offline</p>
+        <p class="target-copy">Target 55% or higher</p>
+      </article>
+      <article class="station" data-station="fuel">
+        <div class="station-head"><h2 id="fuel-label">Wood</h2><span class="level">—</span></div>
+        <div class="meter" role="meter" aria-labelledby="fuel-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="Offline">
+          <div class="fill"></div><div class="target-band"></div>
+        </div>
+        <p class="station-state">Offline</p>
+        <p class="target-copy">Target 55% or higher</p>
+      </article>
+      <article class="station" data-station="wind">
+        <div class="station-head"><h2 id="wind-label">Wind</h2><span class="level">—</span></div>
+        <div class="meter" role="meter" aria-labelledby="wind-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="Offline">
+          <div class="fill"></div><div class="target-band"></div>
+        </div>
+        <p class="station-state">Offline</p>
+        <p class="target-copy">Target 30% to 70%</p>
+      </article>
+      <article class="station" data-station="story">
+        <div class="station-head"><h2 id="story-label">Story</h2><span class="level">—</span></div>
+        <div class="meter" role="meter" aria-labelledby="story-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="Offline">
+          <div class="fill"></div><div class="target-band"></div>
+        </div>
+        <p class="station-state">Offline</p>
+        <p class="target-copy">Start below 35%, then reach 55%</p>
+      </article>
+    </section>
+  </main>
+  <script>
+    const scene = document.querySelector('#scene');
+    const fireAudio = document.querySelector('#fire-audio');
+    const soundButton = document.querySelector('#sound-button');
+    const fullscreenButton = document.querySelector('#fullscreen-button');
+    const resetButton = document.querySelector('#reset-button');
+    fireAudio.volume = .1;
+
+    soundButton.addEventListener('click', async () => {
+      if (!fireAudio.paused) {
+        fireAudio.pause();
+        return;
+      }
+      try {
+        await fireAudio.play();
+      } catch {
+        soundButton.title = 'Campfire sound unavailable';
+      }
+    });
+    fireAudio.addEventListener('play', () => soundButton.setAttribute('aria-pressed', 'true'));
+    fireAudio.addEventListener('pause', () => soundButton.setAttribute('aria-pressed', 'false'));
+
+    fullscreenButton.hidden = !document.fullscreenEnabled;
+    fullscreenButton.addEventListener('click', async () => {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await document.documentElement.requestFullscreen();
+    });
+    document.addEventListener('fullscreenchange', () => {
+      const label = document.fullscreenElement ? 'Exit fullscreen' : 'Enter fullscreen';
+      fullscreenButton.title = label;
+      fullscreenButton.setAttribute('aria-label', label);
+    });
+    const connection = document.querySelector('#connection');
+    const storyLines = document.querySelector('#story-lines');
+    const storyLength = Number(storyLines.closest('.story').dataset.storyLength);
+    const progress = document.querySelector('#steady-progress');
+    const steadyLabel = document.querySelector('#steady-label');
+    const waitingCopy = storyLines.textContent.trim();
+    const stations = [...document.querySelectorAll('[data-station]')].map((card) => {
+      const role = card.dataset.station;
+      return {
+        role,
+        card,
+        min: role === 'wind' ? .3 : .55,
+        max: role === 'wind' ? .7 : 1,
+        value: card.querySelector('.level'),
+        status: card.querySelector('.station-state'),
+        meter: card.querySelector('.meter'),
+        fill: card.querySelector('.fill'),
+      };
+    });
+    let shownLines = [];
+    let resetVersion = 0;
+
+    function setText(element, text) {
+      if (element.textContent !== text) element.textContent = text;
+    }
+
+    function renderStation(station, {level, online}, connected, steady, complete) {
+      const percentage = online ? Math.floor(level * 100 + 1e-7) : 0;
+      let status = 'In range';
+      let ready = false;
+      if (!connected) status = 'Unavailable';
+      else if (!online) status = 'Offline';
+      else if (station.role === 'story' && complete) status = 'Story complete';
+      else if (station.role === 'story') {
+        ready = level < .35 && steady >= 1;
+        if (level < .35) status = ready ? 'Move closer' : 'Wait for steady fire';
+        else status = 'Move back before trying again';
+      } else if (level < station.min) status = 'Move closer';
+      else if (level > station.max) status = 'Move back';
+      else ready = true;
+      station.card.dataset.ready = ready;
+      setText(station.value, online ? `${percentage}%` : '—');
+      setText(station.status, status);
+      station.fill.style.width = online ? `${level * 100}%` : '0%';
+      station.meter.setAttribute('aria-valuenow', percentage);
+      station.meter.setAttribute('aria-valuetext', online ? `${percentage} percent, ${status}` : status);
+    }
+
+    function renderStory(lines) {
+      const sharedPrefix = shownLines.length <= lines.length && shownLines.every((line, i) => line === lines[i]);
+      if (sharedPrefix && shownLines.length === lines.length) return;
+
+      const append = sharedPrefix && shownLines.length > 0;
+      if (!append) storyLines.replaceChildren();
+      for (const line of lines.slice(append ? shownLines.length : 0)) {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = line;
+        storyLines.append(paragraph);
+      }
+      if (!lines.length) {
+        const waiting = document.createElement('p');
+        waiting.className = 'waiting';
+        waiting.textContent = waitingCopy;
+        storyLines.append(waiting);
+      }
+      shownLines = lines;
+    }
+
+    function render(state) {
+      setText(connection, state ? '' : 'Reconnecting…');
+      const fire = state?.fire ?? 0;
+      scene.style.setProperty('--flame-size', .18 + fire * .82);
+      scene.style.setProperty('--flame-light', .34 + fire * .66);
+      scene.style.setProperty('--glow-light', .12 + fire * .88);
+      const targetVolume = .1 + fire * .58;
+      fireAudio.volume += (targetVolume - fireAudio.volume) * .3;
+      const steady = state?.stable_progress ?? 0;
+      const complete = storyLength > 0 && state?.story.length >= storyLength;
+      for (const station of stations) {
+        const sample = state?.stations[station.role] ?? {level: 0, online: false};
+        renderStation(station, sample, Boolean(state), steady, complete);
+      }
+      if (state) renderStory(state.story);
+      progress.value = steady;
+      let progressCopy = 'Hold steady for 3 seconds';
+      if (complete) progressCopy = 'Story complete';
+      else if (steady >= 1) progressCopy = 'Fire steady';
+      setText(steadyLabel, progressCopy);
+    }
+
+    resetButton.addEventListener('click', async () => {
+      resetVersion++;
+      resetButton.disabled = true;
+      try {
+        const response = await fetch('/api/story/reset', {method: 'POST', signal: AbortSignal.timeout(2500)});
+        if (!response.ok) throw new Error('Story reset failed');
+        renderStory([]);
+        progress.value = 0;
+        setText(steadyLabel, 'Hold steady for 3 seconds');
+        resetButton.title = 'Reset story';
+      } catch {
+        resetButton.title = 'Reset failed. Try again.';
+      } finally {
+        resetButton.disabled = false;
+      }
+    });
+
+    async function poll() {
+      const version = resetVersion;
+      try {
+        const response = await fetch('/api/state', {cache: 'no-store', signal: AbortSignal.timeout(2500)});
+        if (!response.ok) throw new Error(`Campfire request failed (${response.status})`);
+        const state = await response.json();
+        if (version === resetVersion && !resetButton.disabled) render(state);
+      } catch {
+        if (version === resetVersion && !resetButton.disabled) render(null);
+      } finally {
+        window.setTimeout(poll, 250);
+      }
+    }
+
+    poll();
+  </script>
+</body>
+</html>
